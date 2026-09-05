@@ -85,3 +85,6 @@ As automações SHALL conceder apenas permissão de leitura do conteúdo por pad
 #### Scenario: Primeira execução aprovada
 - **WHEN** um workflow conclui sua primeira execução aprovada
 - **THEN** seu check fica apto a ser configurado manualmente como obrigatório na proteção da branch principal, sem mutação automática dessa proteção pelo workflow.
+
+### Requirement: Falha controlada temporária
+Esta exigência temporária SHALL tornar a validação estrita vermelha.
