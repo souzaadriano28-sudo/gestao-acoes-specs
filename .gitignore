@@ -6,6 +6,7 @@
 /.idea/
 
 # Artefatos temporários
+/node_modules/
 *.tmp
 *.temp
 *.log
