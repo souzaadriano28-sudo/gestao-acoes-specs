@@ -1,0 +1,21 @@
+# Repositórios de aplicação mantidos separadamente
+/gestao-acoes-spring/
+/gestao-acoes-ui/
+
+# Configuração local de IDE
+/.idea/
+
+# Artefatos temporários
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+/tmp/
+/temp/
+/.cache/
