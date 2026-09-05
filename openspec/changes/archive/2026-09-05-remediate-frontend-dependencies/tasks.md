@@ -34,7 +34,9 @@
 
 - [x] 6.1 Revisar estaticamente `gestao-acoes-ui/.github/workflows/quality.yml` e `e2e.yml` para confirmar Node 24.16.0, npm 11.13.0, cache pelo lockfile, `npm ci`, testes, build, Chromium compatível, SHAs imutáveis, permissões mínimas e ausência de resolução forçada.
 - [x] 6.2 Executar localmente os comandos equivalentes aos dois workflows com o lockfile final e registrar a correspondência entre etapas locais e remotas.
-- [ ] 6.3 Quando houver autorização posterior para publicar revisões, executar o workflow de qualidade e o E2E manual com SHAs completos de frontend/backend e registrar URLs, SHAs e conclusões; manter esta tarefa pendente enquanto branch, commit ou push não estiver autorizado.
+- [x] 6.3 Quando houver autorização posterior para publicar revisões, executar o workflow de qualidade e o E2E manual com SHAs completos de frontend/backend e registrar URLs, SHAs e conclusões; manter esta tarefa pendente enquanto branch, commit ou push não estiver autorizado.
+
+  Evidência remota: Manual E2E [execução 33981562909](https://github.com/souzaadriano28-sudo/gestao-acoes-ui/actions/runs/33981562909), concluída com sucesso em 2min42s usando frontend `4385ddec600d7cbb7e78a2e5549c0d39ba74830d` e backend `d18a3b30ab9ed26044640dac102ab37587b6bece`.
 
 ## 7. Documentation and Scope Review
 
