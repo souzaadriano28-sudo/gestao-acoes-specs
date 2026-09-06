@@ -4,19 +4,19 @@
 
 ## 1. Contract baselines and decisions
 
-- [ ] 1.1 Capture JSON contract fixtures for every existing action, broker, position, balance, buy and sell endpoint and verify current backend contract tests pass unchanged.
-- [ ] 1.2 Define JSON schemas/examples for dashboard, detailed positions, movements, quote provenance, exchange provenance and availability states; verify every IU/PR field maps to a backend-owned value.
+- [x] 1.1 Capture JSON contract fixtures for every existing action, broker, position, balance, buy and sell endpoint and verify current backend contract tests pass unchanged.
+- [x] 1.2 Define JSON schemas/examples for dashboard, detailed positions, movements, quote provenance, exchange provenance and availability states; verify every IU/PR field maps to a backend-owned value.
 - [x] 1.3 Decide and document the exchange-rate source, reference semantics, freshness window and outage behavior; verify the decision satisfies PR-01/04 without a fixed hidden rate.
-- [ ] 1.4 Define the official CVM/BCB participant dataset integration, update cadence and evidence states; verify CNAE alone cannot produce `VERIFIED`.
+- [x] 1.4 Define the official CVM/BCB participant dataset integration, update cadence and evidence states; verify CNAE alone cannot produce `VERIFIED`.
 - [x] 1.5 Record deprecation/compatibility policy for `/carteira/saldo-total`, `/carteira/posicoes` and `validadaNaCvm`; verify existing client fixtures remain accepted.
 
 ## 2. Database and domain metadata
 
 - [x] 2.1 Add an additive Liquibase changeset for quote provenance and verify fresh PostgreSQL migration plus rollback in the migration test.
-- [ ] 2.2 Add additive storage for exchange-rate provenance/cache and verify precision, pair, source and timestamps round-trip in PostgreSQL.
-- [ ] 2.3 Add structured broker regulatory evidence without deleting the legacy boolean and verify existing rows migrate to `NOT_CHECKED`, never `VERIFIED`.
-- [ ] 2.4 Extend transaction/query indexes for deterministic date/id pagination and filters; verify the PostgreSQL query plan avoids a full unbounded client read on representative fixtures.
-- [ ] 2.5 Add domain value objects/enums for availability and provenance and verify unit tests reject missing source, incompatible currency and invalid instants where availability is `AVAILABLE`.
+- [x] 2.2 Add additive storage for exchange-rate provenance/cache and verify precision, pair, source and timestamps round-trip in PostgreSQL.
+- [x] 2.3 Add structured broker regulatory evidence without deleting the legacy boolean and verify existing rows migrate to `NOT_CHECKED`, never `VERIFIED`.
+- [x] 2.4 Extend transaction/query indexes for deterministic date/id pagination and filters; verify the PostgreSQL query plan avoids a full unbounded client read on representative fixtures.
+- [x] 2.5 Add domain value objects/enums for availability and provenance and verify unit tests reject missing source, incompatible currency and invalid instants where availability is `AVAILABLE`.
 
 ## 3. Backend read models
 
@@ -26,16 +26,16 @@
 - [x] 3.4 Implement paginated movement query/filter DTOs and verify stable descending date/id order, empty page, invalid filters and legacy provenance absence.
 - [x] 3.5 Implement dashboard aggregation with per-section availability and verify a missing quote/exchange makes dependent totals unavailable rather than partial or zero.
 - [x] 3.6 Expose additive dashboard, detailed-position and movement endpoints and verify status codes, numeric JSON fields, ISO currency and UTC/offset timestamps in resource contract tests.
-- [ ] 3.7 Preserve legacy balance/position endpoints and verify the baseline fixtures from 1.1 still pass.
-- [ ] 3.8 Add cache/freshness handling for quotes and exchange rates and verify current, stale and unavailable boundaries with a controllable clock.
+- [x] 3.7 Preserve legacy balance/position endpoints and verify the baseline fixtures from 1.1 still pass.
+- [x] 3.8 Add cache/freshness handling for quotes and exchange rates and verify current, stale and unavailable boundaries with a controllable clock.
 
 ## 4. Broker evidence correction
 
-- [ ] 4.1 Separate business-registration mapping from regulatory evidence and verify active CNPJ/CNAE does not set an authorization claim.
-- [ ] 4.2 Implement a deterministic adapter/importer for the chosen official participant source and verify match by canonical CNPJ, category mapping, not-found and unavailable states.
-- [ ] 4.3 Expose evidence source and verification timestamp in broker DTOs while preserving legacy response compatibility; verify contract tests for old and new clients.
-- [ ] 4.4 Add scheduled/manual refresh behavior with stale handling and verify an old `VERIFIED` result is returned as `STALE` after the configured limit.
-- [ ] 4.5 Review logs and error envelopes for the new integrations and verify they contain no tokens, secret URLs, raw provider bodies or personal data not required by the flow.
+- [x] 4.1 Separate business-registration mapping from regulatory evidence and verify active CNPJ/CNAE does not set an authorization claim.
+- [x] 4.2 Implement a deterministic adapter/importer for the chosen official participant source and verify match by canonical CNPJ, category mapping, not-found and unavailable states.
+- [x] 4.3 Expose evidence source and verification timestamp in broker DTOs while preserving legacy response compatibility; verify contract tests for old and new clients.
+- [x] 4.4 Add scheduled/manual refresh behavior with stale handling and verify an old `VERIFIED` result is returned as `STALE` after the configured limit.
+- [x] 4.5 Review logs and error envelopes for the new integrations and verify they contain no tokens, secret URLs, raw provider bodies or personal data not required by the flow.
 
 ## 5. Frontend foundations and components
 
