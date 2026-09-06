@@ -29,21 +29,24 @@
 
 ## 4. Phase 3 - Containerized Runtime
 
-- [ ] 4.1 Confirmar arquitetura e versões suportadas, selecionar imagens explícitas de Java 17 e PostgreSQL e registrar digests revisados; verificar disponibilidade do Docker Engine/Compose e documentar alternativa quando indisponível.
-- [ ] 4.2 Criar `.dockerignore` para excluir VCS, IDEs, builds, relatórios e todos os arquivos `.env`, preservando somente entradas necessárias ao build; inspecionar o contexto e comprovar ausência de segredos.
-- [ ] 4.3 Adicionar saúde agregada mínima da aplicação sem detalhes sensíveis; verificar estados pronto/não pronto com PostgreSQL disponível e indisponível.
-- [ ] 4.4 Criar Dockerfile multi-stage usando Java 17 e Maven Wrapper, cache de dependências, artefato final mínimo e usuário não-root; construir e inspecionar camadas, conteúdo, UID/GID e processo de entrada.
-- [ ] 4.5 Criar `compose.yaml` com `application` e `postgres`, rede interna, datasource por hostname de serviço, volume nomeado, bindings loopback parametrizáveis, healthchecks e dependência por saúde; validar serviços e configuração sem persistir a saída resolvida.
-- [ ] 4.6 Verificar fail-fast do Compose para senha/tokens ausentes, credenciais inválidas, banco não saudável e colisão de porta; confirmar que logs e relatórios não expõem segredos.
-- [ ] 4.7 Executar a pilha com volume novo, aguardar os dois healthchecks, verificar migrations/Hibernate, consultar endpoints locais e registrar diagnóstico dos containers sem acessar provedores financeiros reais.
-- [ ] 4.8 Persistir registros representativos de ação, corretora, transação e posição por caminho isolado, executar `down` sem volumes, reiniciar e comprovar dados, IDs, invariantes e histórico de migrations preservados.
-- [ ] 4.9 Ensaiar reset com volumes somente em pilha descartável, verificar aviso de perda e reconstrução integral por migrations, e confirmar que a documentação não recomenda o comando destrutivo para dados relevantes.
+- [x] 4.1 Confirmar arquitetura e versões suportadas, selecionar imagens explícitas de Node/Angular, Nginx sem privilégios, Java 17 e PostgreSQL 17 e registrar digests revisados; verificar Docker Engine/Compose e a compatibilidade da plataforma.
+- [x] 4.2 Criar `.dockerignore` no frontend e backend para excluir VCS, IDEs, builds, relatórios e todos os arquivos `.env`, preservando somente entradas necessárias; inspecionar ambos os contextos e comprovar ausência de segredos.
+- [x] 4.3 Tornar `/api` o contrato relativo do frontend e adicionar proxy Angular local; verificar unit tests/build e chamadas pelo `ng serve` sem URL absoluta nem mudança de código por ambiente.
+- [x] 4.4 Criar Dockerfile multi-stage do frontend e configuração Nginx sem privilégios com fallback SPA, proxy `/api` e saúde própria; construir e inspecionar conteúdo, usuário, porta, precedência das rotas e respostas.
+- [x] 4.5 Adicionar saúde agregada mínima do backend sem detalhes sensíveis; verificar estados pronto/não pronto com PostgreSQL disponível e indisponível.
+- [x] 4.6 Criar Dockerfile multi-stage do backend usando Java 17 e Maven Wrapper, cache de dependências, artefato final mínimo e usuário não-root; construir e inspecionar camadas, conteúdo, UID/GID e processo de entrada.
+- [x] 4.7 Criar `compose.yaml` com `frontend`, `backend` e `postgres` 17, rede interna, volume nomeado, exposição mínima/loopback, healthchecks e dependências por saúde; validar serviços e configuração sem persistir a saída resolvida.
+- [x] 4.8 Verificar fail-fast do Compose para segredos ausentes, credenciais inválidas, banco não saudável e colisão de porta; confirmar que imagens, logs e relatórios não expõem segredos.
+- [x] 4.9 Executar uma pilha isolada com volume novo, aguardar os três healthchecks, verificar Liquibase/Hibernate, frontend, navegação SPA, proxy `/api` e endpoints do backend sem acessar provedores financeiros reais.
+- [x] 4.10 Persistir registros representativos das quatro entidades, executar `down` sem volumes, reiniciar e comprovar dados, IDs, invariantes e histórico de migrations preservados.
+- [x] 4.11 Ensaiar reset somente no volume descartável criado nesta execução, verificar aviso de perda e reconstrução integral por migrations, sem remover ou recomendar remoção de volumes preexistentes.
+- [x] 4.12 Executar o E2E Playwright contra o frontend containerizado e o backend/PostgreSQL da composição, com dependências externas isoladas, verificando a jornada completa e ausência de tráfego a provedores reais.
 
 ## 5. Final Regression, Documentation, and Scope Review
 
 - [x] 5.1 Executar `mvnw verify` e o teste PostgreSQL dedicado no backend final, registrando total e resultado e confirmando que nenhum teste foi removido, ignorado ou afrouxado.
-- [x] 5.2 Executar instalação limpa, testes unitários e build do frontend sem alterar seu manifesto/lockfile; registrar resultados e hashes antes/depois.
-- [x] 5.3 Executar E2E com Angular e Spring reais, H2/migrations e stub local, verificando portas livres antes/depois, nenhum provedor externo e todos os contratos da jornada de investimentos.
+- [x] 5.2 Executar instalação limpa, auditoria npm, testes unitários e build do frontend sem alterar seu manifesto/lockfile; registrar resultados e hashes antes/depois.
+- [x] 5.3 Executar E2E com Angular, Spring e PostgreSQL 17 reais na pilha containerizada e dependências externas isoladas, verificando portas/recursos antes e depois, nenhum provedor externo e todos os contratos da jornada de investimentos.
 - [x] 5.4 Revisar workflows dos três repositórios e executar comandos locais equivalentes; preservar permissões, SHAs, caches, timeouts e gates existentes, deixando qualquer ampliação remota de Docker pendente sem evidência de capacidade.
-- [ ] 5.5 Finalizar README e runbooks de configuração, migration, rollback, baseline, container, persistência, rotação de credenciais e troubleshooting; verificar comandos em ambiente descartável e registrar riscos/limitações reais.
-- [x] 5.6 Revisar os diffs dos três repositórios, executar busca final por segredos e artefatos, confirmar que frontend/regras de negócio permanecem inalterados e validar `professionalize-runtime-infrastructure` e todo o OpenSpec em modo estrito.
+- [x] 5.5 Finalizar README e runbooks de configuração, migration, rollback, baseline, container, persistência, rotação de credenciais e troubleshooting; verificar comandos em ambiente descartável e registrar riscos/limitações reais.
+- [x] 5.6 Revisar os diffs dos três repositórios, executar busca final por segredos e artefatos, confirmar que regras de negócio e contratos HTTP permanecem inalterados e validar `professionalize-runtime-infrastructure` e todo o OpenSpec em modo estrito.

@@ -10,13 +10,13 @@ The persistent model consists of `acao`, `corretora`, `transacao`, and `posicao_
 
 - Make local, test, container, and future deployed configuration explicit and fail-fast without storing secrets.
 - Establish one reviewed schema history that works for fresh H2/PostgreSQL databases and safely adopts existing PostgreSQL data.
-- Package only the backend API with PostgreSQL in a reproducible, observable local composition.
+- Package the Angular frontend, Spring Boot backend, and PostgreSQL 17 in a reproducible, observable local composition.
 - Preserve business/API behavior and prove compatibility through the current test layers plus migration and container checks.
 
 **Non-Goals:**
 
-- Containerizing Angular, adding an orchestrator, registry publication, TLS, production deployment, or choosing a cloud secret manager.
-- Changing entities, endpoint contracts, monetary policy, canonicalization, transaction boundaries, locking behavior, provider selection, or frontend API URLs.
+- Adding an orchestrator beyond Docker Compose, registry publication, TLS, production deployment, or choosing a cloud secret manager.
+- Changing entities, endpoint contracts, monetary policy, canonicalization, transaction boundaries, locking behavior or provider selection. Frontend API calls change only from an absolute development URL to the equivalent relative `/api` contract.
 - Creating a real `.env`, embedding demonstration investment records, replacing H2/PostgreSQL tests, or enabling real provider traffic in automated tests.
 
 ## Decisions
@@ -66,23 +66,23 @@ H2 and PostgreSQL both execute the common initial changelog and pass Hibernate v
 
 Using separate unrelated schemas per test engine was rejected because it would allow mappings and constraints to drift silently.
 
-### 7. Build a backend-only, multi-stage, non-root image
+### 7. Build separate multi-stage, non-root frontend and backend images
 
-The Dockerfile uses explicit Java 17 builder/runtime images, the repository's Maven Wrapper, dependency-first layering, and a final image containing the application artifact rather than source or Maven. Base versions are pinned; digests should be recorded after verifying the target architecture. Runtime uses a dedicated non-root UID/GID. `.dockerignore` excludes VCS, IDE, build/test outputs, documentation not needed for compilation, and every local environment file.
+The backend Dockerfile uses explicit Java 17 builder/runtime images, the repository's Maven Wrapper, dependency-first layering, and a final image containing the application artifact rather than source or Maven. The frontend Dockerfile builds Angular in a Node build stage and copies only the production browser assets into an unprivileged Nginx runtime. Base versions are explicit and their reviewed digests are recorded after verifying the target architecture. Both runtimes use non-root identities. Each repository has a `.dockerignore` excluding VCS, IDE, local build/test outputs, reports, and every local environment file.
 
-The frontend remains outside Compose because the requested topology and current delivery boundary concern the Spring API plus PostgreSQL. Its unit/build/E2E suites remain acceptance gates.
+Nginx listens on an unprivileged internal port, falls back to `index.html` for Angular client routes, proxies `/api` to the backend service by its Compose hostname, and exposes a lightweight health endpoint. Angular uses relative `/api` URLs in every environment; local `ng serve` uses an Angular proxy configuration to preserve the same browser contract without CORS coupling.
 
 ### 8. Compose models readiness, persistence, and least exposure
 
-`compose.yaml` declares `application` and `postgres` on the project network. The application connects to `postgres:5432`, never container-local `localhost`. PostgreSQL uses an explicit supported major image, a named volume, and `pg_isready`; the application depends on database health and exposes a dedicated Spring health endpoint. Add only the health capability required for readiness and expose no sensitive actuator details.
+`compose.yaml` declares `frontend`, `backend`, and `postgres` on one internal application network. The backend connects to `postgres:5432`, never container-local `localhost`; Nginx connects to `backend` on its internal application port. PostgreSQL uses an explicit PostgreSQL 17 image, a named volume, and `pg_isready`; the backend depends on database health, and the frontend depends on backend health. The backend exposes a dedicated aggregate Spring health endpoint without sensitive actuator details, while the frontend healthcheck verifies Nginx locally.
 
-Host bindings are configurable and loopback-bound for local use. PostgreSQL host publication remains available for diagnostics/tests but is not treated as an internet-facing production topology. Required secrets use Compose required-variable expressions; defaults are limited to non-secret database name/user and ports. `docker compose config` is validated without persisting its resolved output.
+The frontend is the normal host entry point and is loopback-bound on a configurable port. Backend and PostgreSQL host publications are optional, loopback-bound diagnostic/test profiles rather than requirements for browser traffic; internal service ports remain fixed and documented. Required secrets use Compose required-variable expressions; defaults are limited to non-secret database name/user and ports. `docker compose config` is validated without persisting its resolved output.
 
 ### 9. Acceptance combines existing regressions with migration/container evidence
 
 The implementation must retain `mvnw verify`, the dedicated PostgreSQL concurrency suite, frontend tests/build, real Angular/Spring E2E with local provider stub, and strict OpenSpec/workflow checks. New tests verify fresh migration, second-start idempotence, checksum behavior, schema validation, adoption refusal/success, reversible rollback, container health, migration history, and volume persistence.
 
-The container smoke journey validates startup, local API reads, migration tables, restart, and persisted investment-domain records created without external network. The existing E2E remains the authoritative full user journey because it already supplies deterministic provider substitutes; adding a third provider-stub container is deferred unless a later requirement demands the complete browser journey inside Compose.
+The container journey validates all three healthchecks, browser entry through Nginx, direct backend diagnostics when explicitly published, migration tables, deep-link SPA fallback, `/api` proxying, restart, and persisted investment-domain records without external provider traffic. The existing Playwright journey is pointed at the containerized frontend and uses deterministic fictitious/provider-independent data paths; if its existing provider stub is required, it stays an isolated test dependency outside the three production runtime services.
 
 ## Risks / Trade-offs
 
@@ -96,6 +96,8 @@ The container smoke journey validates startup, local API reads, migration tables
 - [PostgreSQL volume retains its original password after `.env` changes] → document SQL credential rotation versus destructive volume reset and never imply that editing `.env` rotates stored credentials.
 - [Additional migration/container gates increase execution time] → preserve fast H2 tests, isolate slower PostgreSQL/container suites, and keep existing workflow timeouts under review rather than silently skipping coverage.
 - [Health endpoint could disclose internals] → expose only aggregate readiness/liveness needed by Compose and keep details disabled.
+- [Nginx proxy or SPA fallback can mask backend failures or static-file misses] → give health and `/api` locations precedence over the SPA fallback and test deep links, proxy failures, and backend readiness separately.
+- [Relative API URLs can break local development] → make `/api` the single browser contract and supply a checked-in Angular development proxy targeting the local backend.
 
 ## Migration Plan
 
@@ -103,8 +105,9 @@ The container smoke journey validates startup, local API reads, migration tables
 2. Inventory a Hibernate-created PostgreSQL schema and the four entity mappings; produce/review the initial changelog and adoption scripts before enabling Liquibase.
 3. Prove fresh H2 and PostgreSQL creation, idempotent restart, ORM validation, migration rollback, and all existing transaction/concurrency behavior.
 4. Rehearse the existing-database runbook against a disposable copy: backup/restore, failing and passing preflight, one-time normalization, exact schema comparison, `changelog-sync`, restart, and data/ID preservation.
-5. Build and inspect the application image, validate Compose with secrets supplied outside Git, start a new volume, wait for both healthchecks, inspect migration history, exercise the local API, restart without data loss, and clean up without removing the volume by default.
-6. Run backend verification, frontend unit/build, real Angular/Spring E2E with stubbed providers, static workflow checks, and strict OpenSpec validation; record versions, commands, timings, and any platform-specific limitations.
+5. Build and inspect the frontend and backend images, validate the three-service Compose model with secrets supplied outside Git, start an isolated new PostgreSQL 17 volume, and wait for all three healthchecks.
+6. Exercise the browser entry point, SPA deep links, Nginx `/api` proxy, optional loopback diagnostics, Liquibase history, and representative persistence across `down`/`up` without volume removal.
+7. Run backend verification, frontend unit/build/audit, Playwright E2E against the containerized environment, static workflow checks, and strict OpenSpec validation; record versions, commands, timings, and platform-specific limitations, then clean only disposable resources created for this validation.
 
 For a failed reversible changeset in a disposable environment, run its tested Liquibase rollback. For an adopted persistent database after a lossy operation, stop application traffic and restore the verified backup; do not clear checksums, remove locks blindly, or switch Hibernate back to schema mutation.
 
