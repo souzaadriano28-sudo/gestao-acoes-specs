@@ -32,23 +32,27 @@ A interface SHALL permitir somente um envio pendente por formulário de cadastro
 - **THEN** o formulário permite correção e nova tentativa explícita, sem repetir a operação automaticamente.
 
 ### Requirement: AI-03 Credenciais externas
-Código, configurações, documentação, fixtures e artefatos versionados atuais dos dois repositórios SHALL conter somente referências a configuração ou valores fictícios explícitos, nunca credenciais reais. Os dois provedores de cotação SHALL receber suas credenciais por configuração externa. Nos perfis que habilitam integrações reais, BRAPI_TOKEN e TWELVEDATA_API_KEY SHALL ser obrigatórios; no perfil PostgreSQL, DB_PASSWORD SHALL ser obrigatório. Ausência, valor vazio ou composto somente de espaços de qualquer credencial obrigatória SHALL impedir inicialização com indicação apenas do nome da configuração ausente. Perfis de testes isolados SHALL substituir integrações e banco conforme sua fixture e não exigir segredos reais. Logs e respostas não SHALL expor os valores.
+Código, configurações, documentação, fixtures, imagens e artefatos versionados dos três repositórios SHALL conter somente referências a configuração ou valores deliberadamente fictícios, nunca credenciais reais. Perfil ativo, URL, usuário e senha do datasource, tokens dos provedores de cotação, endpoints dos quatro provedores, origem CORS e portas publicadas SHALL ser configuráveis externamente sem recompilar a aplicação. Nos perfis que habilitam integrações reais, `BRAPI_TOKEN` e `TWELVEDATA_API_KEY` SHALL ser obrigatórios; em qualquer perfil PostgreSQL, a senha SHALL ser obrigatória e não possuir valor padrão versionado. Ausência, valor vazio ou composto somente de espaços de qualquer segredo obrigatório SHALL impedir inicialização com indicação apenas do nome da configuração ausente. Perfis de testes isolados SHALL substituir integrações e banco conforme sua fixture e não exigir segredos reais. Logs, respostas, relatórios e configurações renderizadas não SHALL expor os valores.
 
 #### Scenario: Configuracao valida
-- **WHEN** BRAPI_TOKEN, TWELVEDATA_API_KEY e a credencial de banco exigida pelo perfil são fornecidos externamente
-- **THEN** cada integração recebe o valor correspondente sem literal alternativo embutido.
+- **WHEN** perfil, datasource, endpoints e origem permitida são fornecidos externamente e BRAPI_TOKEN, TWELVEDATA_API_KEY e a credencial de banco exigida pelo perfil estão presentes
+- **THEN** a aplicação inicia com os valores informados sem literal secreto alternativo embutido e sem mudar seus contratos HTTP.
 
 #### Scenario: Credencial ausente
-- **WHEN** a aplicação com integrações reais inicia sem BRAPI_TOKEN/TWELVEDATA_API_KEY, ou com valor vazio/somente espaços, ou o perfil PostgreSQL inicia sem DB_PASSWORD válido
-- **THEN** falha com diagnóstico do nome ausente, sem divulgar outras credenciais.
+- **WHEN** a aplicação com integrações reais inicia sem BRAPI_TOKEN/TWELVEDATA_API_KEY, ou com valor vazio/somente espaços, ou um perfil PostgreSQL inicia sem senha válida
+- **THEN** falha antes de aceitar tráfego com diagnóstico do nome ausente, sem divulgar outras credenciais.
 
 #### Scenario: Credencial nao aparece na saida
-- **WHEN** uma integração falha e são inspecionados logs e envelope HTTP resultantes
-- **THEN** nenhum valor de BRAPI_TOKEN, TWELVEDATA_API_KEY ou DB_PASSWORD aparece, inclusive em URLs e mensagens de exceção.
+- **WHEN** uma integração ou inicialização falha e são inspecionados logs, envelope HTTP, relatórios e configuração renderizada segura
+- **THEN** nenhum valor de BRAPI_TOKEN, TWELVEDATA_API_KEY ou senha de banco aparece, inclusive em URLs e mensagens de exceção.
 
 #### Scenario: Testes isolados
-- **WHEN** a suíte automatizada é executada sem credenciais reais
-- **THEN** usa provedores simulados e valores fictícios explícitos sem consultar serviços financeiros externos.
+- **WHEN** as suítes H2, PostgreSQL e E2E são executadas sem credenciais reais
+- **THEN** usam provedores simulados e valores fictícios explícitos sem consultar serviços financeiros externos.
+
+#### Scenario: Modelo local seguro
+- **WHEN** um desenvolvedor prepara configuração local a partir do modelo versionado
+- **THEN** o modelo documenta todas as variáveis sem conter segredo funcional, arquivos `.env` locais permanecem ignorados pelo Git e pelo contexto de imagem e a aplicação não presume que o Spring carregue esses arquivos automaticamente.
 
 ### Requirement: AI-04 Regressao verificavel
 As suítes dos dois repositórios SHALL compilar e passar em execução não interativa, cobrir os cenários TI, CI, AE e AI desta mudança e usar resultados determinísticos de provedores simulados. A validação integrada SHALL comprovar os contratos reais da API e o consumo das três telas; concorrência SHALL ser verificada em PostgreSQL isolado com barreiras controladas, timeouts limitados e resultados finais exatos, além dos testes rápidos.
