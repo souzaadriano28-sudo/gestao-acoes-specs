@@ -6,13 +6,13 @@
 
 - [ ] 1.1 Capture JSON contract fixtures for every existing action, broker, position, balance, buy and sell endpoint and verify current backend contract tests pass unchanged.
 - [ ] 1.2 Define JSON schemas/examples for dashboard, detailed positions, movements, quote provenance, exchange provenance and availability states; verify every IU/PR field maps to a backend-owned value.
-- [ ] 1.3 Decide and document the exchange-rate source, reference semantics, freshness window and outage behavior; verify the decision satisfies PR-01/04 without a fixed hidden rate.
+- [x] 1.3 Decide and document the exchange-rate source, reference semantics, freshness window and outage behavior; verify the decision satisfies PR-01/04 without a fixed hidden rate.
 - [ ] 1.4 Define the official CVM/BCB participant dataset integration, update cadence and evidence states; verify CNAE alone cannot produce `VERIFIED`.
-- [ ] 1.5 Record deprecation/compatibility policy for `/carteira/saldo-total`, `/carteira/posicoes` and `validadaNaCvm`; verify existing client fixtures remain accepted.
+- [x] 1.5 Record deprecation/compatibility policy for `/carteira/saldo-total`, `/carteira/posicoes` and `validadaNaCvm`; verify existing client fixtures remain accepted.
 
 ## 2. Database and domain metadata
 
-- [ ] 2.1 Add an additive Liquibase changeset for quote provenance and verify fresh PostgreSQL migration plus rollback in the migration test.
+- [x] 2.1 Add an additive Liquibase changeset for quote provenance and verify fresh PostgreSQL migration plus rollback in the migration test.
 - [ ] 2.2 Add additive storage for exchange-rate provenance/cache and verify precision, pair, source and timestamps round-trip in PostgreSQL.
 - [ ] 2.3 Add structured broker regulatory evidence without deleting the legacy boolean and verify existing rows migrate to `NOT_CHECKED`, never `VERIFIED`.
 - [ ] 2.4 Extend transaction/query indexes for deterministic date/id pagination and filters; verify the PostgreSQL query plan avoids a full unbounded client read on representative fixtures.
@@ -20,12 +20,12 @@
 
 ## 3. Backend read models
 
-- [ ] 3.1 Implement the exchange-rate port and deterministic stub adapter; verify BRL/USD conversion tests cover current, stale, missing and invalid responses without external network.
-- [ ] 3.2 Remove the fixed 5,30 path from new consolidation logic and verify mixed-currency totals use only traceable rates with one final HALF_UP rounding.
-- [ ] 3.3 Implement detailed-position DTO/query calculations in native currency and verify cost, market value and result for BRL, USD and same asset in two brokers.
-- [ ] 3.4 Implement paginated movement query/filter DTOs and verify stable descending date/id order, empty page, invalid filters and legacy provenance absence.
-- [ ] 3.5 Implement dashboard aggregation with per-section availability and verify a missing quote/exchange makes dependent totals unavailable rather than partial or zero.
-- [ ] 3.6 Expose additive dashboard, detailed-position and movement endpoints and verify status codes, numeric JSON fields, ISO currency and UTC/offset timestamps in resource contract tests.
+- [x] 3.1 Implement the exchange-rate port and deterministic stub adapter; verify BRL/USD conversion tests cover current, stale, missing and invalid responses without external network.
+- [x] 3.2 Remove the fixed 5,30 path from new consolidation logic and verify mixed-currency totals use only traceable rates with one final HALF_UP rounding.
+- [x] 3.3 Implement detailed-position DTO/query calculations in native currency and verify cost, market value and result for BRL, USD and same asset in two brokers.
+- [x] 3.4 Implement paginated movement query/filter DTOs and verify stable descending date/id order, empty page, invalid filters and legacy provenance absence.
+- [x] 3.5 Implement dashboard aggregation with per-section availability and verify a missing quote/exchange makes dependent totals unavailable rather than partial or zero.
+- [x] 3.6 Expose additive dashboard, detailed-position and movement endpoints and verify status codes, numeric JSON fields, ISO currency and UTC/offset timestamps in resource contract tests.
 - [ ] 3.7 Preserve legacy balance/position endpoints and verify the baseline fixtures from 1.1 still pass.
 - [ ] 3.8 Add cache/freshness handling for quotes and exchange rates and verify current, stale and unavailable boundaries with a controllable clock.
 
@@ -91,7 +91,7 @@
 - [ ] 10.10 Add authenticated tablet E2E at 768×1024 and verify compact navigation, two-column cards, readable tables, unobscured focus and absence of overlap.
 - [ ] 10.4 Add E2E for stale data, partial failure, exchange unavailable, 409 conflict and unknown mutation outcome; verify retry never resends the original mutation.
 - [ ] 10.5 Run non-interactive frontend build/unit suite and backend Maven unit/integration suite; verify both exit successfully without skipped tests hiding regressions.
-- [ ] 10.6 Run PostgreSQL concurrency tests for simultaneous first buys, contested sales and lock timeout; verify exact transaction/position outcomes remain compliant with TI-06.
+- [x] 10.6 Run PostgreSQL concurrency tests for simultaneous first buys, contested sales and lock timeout; verify exact transaction/position outcomes remain compliant with TI-06.
 - [ ] 10.7 Build and start exactly `postgres`, `backend` and `frontend`, wait for all healthchecks, run desktop/mobile Playwright through Nginx `/api`, and verify the isolated stack succeeds with simulated providers.
 - [ ] 10.8 Record screenshots, accessibility checklist, contract examples and test commands/results; verify the academic disclaimer and demonstrative-data labels are visible in all approval artifacts.
 - [ ] 10.9 Run `openspec validate --change modernize-investment-experience --strict --no-interactive` after implementation and verify zero errors/warnings before requesting archive review.
