@@ -2,6 +2,11 @@
 /gestao-acoes-spring/
 /gestao-acoes-ui/
 
+# Configuração local do Compose (nunca versionar segredos reais)
+.env
+.env.*
+!.env.example
+
 # Configuração local de IDE
 /.idea/
 

@@ -1,0 +1,77 @@
+name: gestao-acoes
+
+services:
+  postgres:
+    image: postgres:17.6-alpine3.22@sha256:ef257d85f76e48da1c64832459b59fcaba1a4dac97bf5d7450c77753542eee94
+    environment:
+      POSTGRES_DB: ${DB_NAME:-gestao_acoes}
+      POSTGRES_USER: ${DB_USERNAME:-gestao_acoes}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD is required}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 10s
+    restart: unless-stopped
+    networks:
+      - runtime
+
+  backend:
+    build:
+      context: ./gestao-acoes-spring
+      dockerfile: Dockerfile
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      DB_URL: jdbc:postgresql://postgres:5432/${DB_NAME:-gestao_acoes}
+      DB_USERNAME: ${DB_USERNAME:-gestao_acoes}
+      DB_PASSWORD: ${DB_PASSWORD:?DB_PASSWORD is required}
+      BRAPI_TOKEN: ${BRAPI_TOKEN:?BRAPI_TOKEN is required}
+      TWELVEDATA_API_KEY: ${TWELVEDATA_API_KEY:?TWELVEDATA_API_KEY is required}
+      INTEGRATIONS_BRAPI_URL: ${INTEGRATIONS_BRAPI_URL:-https://brapi.dev/api}
+      INTEGRATIONS_TWELVEDATA_URL: ${INTEGRATIONS_TWELVEDATA_URL:-https://api.twelvedata.com}
+      INTEGRATIONS_BRASILAPI_URL: ${INTEGRATIONS_BRASILAPI_URL:-https://brasilapi.com.br/api/cnpj/v1}
+      INTEGRATIONS_VIACEP_URL: ${INTEGRATIONS_VIACEP_URL:-https://viacep.com.br/ws}
+      APP_CORS_ALLOWED_ORIGIN: http://127.0.0.1:${FRONTEND_PORT:-4200}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/actuator/health/readiness"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+      start_period: 30s
+    restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - runtime
+
+  frontend:
+    build:
+      context: ./gestao-acoes-ui
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:${FRONTEND_PORT:-4200}:8080"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:8080/health >/dev/null && wget -qO- http://backend:8080/actuator/health/readiness >/dev/null"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    restart: unless-stopped
+    networks:
+      - runtime
+
+networks:
+  runtime:
+    driver: bridge
+
+volumes:
+  postgres_data:
