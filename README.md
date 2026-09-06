@@ -6,7 +6,7 @@ As bases estão fixadas por versão e digest para Linux amd64: Node 24.8.0 Alpin
 
 ## Configuração segura
 
-O Compose exige `DB_PASSWORD`, `BRAPI_TOKEN` e `TWELVEDATA_API_KEY`. O arquivo `.env.example` contém somente valores deliberadamente não funcionais. Não salve um `.env` real no Git, em logs, em issues ou na saída persistida de `docker compose config`; o Spring não carrega `.env` quando executado fora do Compose.
+O Compose exige `DB_PASSWORD`, `BRAPI_TOKEN`, `TWELVEDATA_API_KEY`, `ADMIN_INITIAL_USERNAME` e `ADMIN_INITIAL_PASSWORD`. O arquivo `.env.example` contém somente valores deliberadamente não funcionais. Não salve um `.env` real no Git, em logs, em issues ou na saída persistida de `docker compose config`; o Spring não carrega `.env` quando executado fora do Compose. Consulte também a [documentação operacional de autenticação do backend](https://github.com/souzaadriano28-sudo/gestao-acoes-spring/blob/main/docs/authentication-operations.md).
 
 PowerShell:
 
@@ -14,6 +14,8 @@ PowerShell:
 $env:DB_PASSWORD = '<obter-do-cofre-local>'
 $env:BRAPI_TOKEN = '<obter-do-cofre-local>'
 $env:TWELVEDATA_API_KEY = '<obter-do-cofre-local>'
+$env:ADMIN_INITIAL_USERNAME = '<obter-do-cofre-local>'
+$env:ADMIN_INITIAL_PASSWORD = '<obter-do-cofre-local>'
 docker compose config --quiet
 docker compose up -d --build
 ```
@@ -24,6 +26,8 @@ Shell POSIX:
 DB_PASSWORD='<obter-do-cofre-local>' \
 BRAPI_TOKEN='<obter-do-cofre-local>' \
 TWELVEDATA_API_KEY='<obter-do-cofre-local>' \
+ADMIN_INITIAL_USERNAME='<obter-do-cofre-local>' \
+ADMIN_INITIAL_PASSWORD='<obter-do-cofre-local>' \
 docker compose up -d --build
 ```
 
