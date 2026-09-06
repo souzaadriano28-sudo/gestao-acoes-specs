@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atlas Carteira — Login demonstrativo</title>
+  <style>
+    :root{--navy:#0b1f3a;--navy2:#102b50;--blue:#185adb;--blue2:#3478ee;--bg:#f4f7fb;--surface:#fff;--text:#172033;--muted:#5d6b82;--border:#ccd7e6;--focus:#82adff;--warning:#73510c;--warning-bg:#fff8e7;--error:#a71924;--shadow:0 24px 70px rgba(7,25,49,.16)}
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text);background:var(--bg)}button,input{font:inherit}.skip{position:fixed;top:-80px;left:16px;z-index:20;padding:10px 14px;background:white;color:var(--navy);border-radius:8px}.skip:focus{top:16px;outline:3px solid var(--focus)}
+    .shell{min-height:100vh;display:grid;grid-template-columns:minmax(560px,58%) minmax(480px,42%)}
+    .story{position:relative;overflow:hidden;background:linear-gradient(145deg,#081a31 0%,#0b2445 55%,#123866 100%);color:white;padding:54px 64px;display:flex;flex-direction:column}
+    .story:before,.story:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(119,169,255,.17)}.story:before{width:640px;height:640px;right:-235px;top:110px}.story:after{width:430px;height:430px;right:-92px;top:216px}
+    .grid{position:absolute;inset:0;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,transparent,black 30%,transparent)}
+    .brand{position:relative;z-index:2;display:flex;align-items:center;gap:13px}.mark{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(145deg,#2f7df5,#72a9ff);font-size:13px;font-weight:900;letter-spacing:-.04em;box-shadow:inset 0 0 0 1px rgba(255,255,255,.26),0 10px 28px rgba(22,96,220,.3)}.brand strong{display:block;font-size:16px}.brand span{display:block;margin-top:2px;color:#aebed2;font-size:11px;letter-spacing:.02em}
+    .hero{position:relative;z-index:2;margin:auto 0;max-width:610px}.eyebrow{color:#7daeff;font-weight:850;font-size:11px;letter-spacing:.16em;text-transform:uppercase}.hero h1{font-size:46px;line-height:1.08;letter-spacing:-.045em;margin:14px 0 18px;max-width:570px}.hero>p{color:#bdcbe0;font-size:16px;line-height:1.65;max-width:530px;margin:0}
+    .signal{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.signal div{padding:16px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:rgba(255,255,255,.055);backdrop-filter:blur(8px)}.signal b{display:block;font-size:12px;margin-bottom:5px}.signal span{color:#aebed2;font-size:10px;line-height:1.45;display:block}
+    .story-foot{position:relative;z-index:2;color:#93a8c3;font-size:10px;line-height:1.5;max-width:600px}
+    .access{background:var(--surface);padding:46px 64px;display:flex;align-items:center;justify-content:center}.access-inner{width:100%;max-width:430px}.security{display:inline-flex;align-items:center;gap:7px;color:#285079;background:#eef5ff;border:1px solid #d6e5fb;border-radius:999px;padding:7px 10px;font-size:10px;font-weight:800}.security i{width:7px;height:7px;background:#27805a;border-radius:50%}
+    h2{font-size:30px;letter-spacing:-.04em;margin:20px 0 8px}.lead{color:var(--muted);font-size:13px;line-height:1.55;margin:0 0 30px}.field{display:grid;gap:8px;margin:0 0 18px}label{font-size:11px;color:#34445b;font-weight:800}.control-wrap{position:relative}.control{width:100%;height:48px;border:1px solid var(--border);border-radius:10px;padding:0 14px;background:white;color:var(--text);font-size:13px;outline:0;transition:.16s}.control:hover{border-color:#9bacbf}.control:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(24,90,219,.14)}.control::placeholder{color:#8794a7}.password{padding-right:78px}.reveal{position:absolute;right:7px;top:7px;height:34px;border:0;background:transparent;color:var(--blue);font-size:10px;font-weight:850;border-radius:7px;padding:0 9px}.reveal:hover{background:#edf4ff}.reveal:focus-visible,.submit:focus-visible{outline:3px solid var(--focus);outline-offset:2px}.hint{font-size:10px;color:var(--muted);line-height:1.45}.submit{width:100%;height:48px;border:0;border-radius:10px;color:white;background:linear-gradient(135deg,var(--blue),var(--blue2));font-size:12px;font-weight:850;box-shadow:0 9px 22px rgba(24,90,219,.22);cursor:pointer;margin-top:6px}.submit:hover{filter:brightness(.96);transform:translateY(-1px)}
+    .privacy{display:flex;gap:10px;align-items:flex-start;margin:18px 2px 0;color:var(--muted);font-size:10px;line-height:1.5}.privacy svg{flex:none;color:#486582;margin-top:1px}.notice{margin-top:30px;padding:13px 14px;border:1px solid #ecd59c;border-radius:10px;background:var(--warning-bg);color:var(--warning);font-size:10px;line-height:1.5}.notice strong{display:block;font-size:10px;margin-bottom:3px}.meta{text-align:center;color:#8490a2;font-size:9px;margin:18px 0 0}
+    @media(max-width:760px){.shell{display:block;min-height:100svh}.story{min-height:178px;padding:24px 22px 28px}.story:before{width:310px;height:310px;right:-140px;top:2px}.story:after{display:none}.brand .mark{width:38px;height:38px;border-radius:11px}.brand strong{font-size:14px}.hero{margin:28px 0 0}.eyebrow{font-size:9px}.hero h1{font-size:27px;margin:9px 0 7px;max-width:330px}.hero>p{font-size:11px;line-height:1.5;max-width:330px}.signal,.story-foot{display:none}.access{padding:28px 20px 26px;align-items:flex-start}.access-inner{max-width:none}.security{font-size:9px;padding:6px 9px}h2{font-size:24px;margin:16px 0 6px}.lead{font-size:11px;margin-bottom:22px}.field{margin-bottom:15px}.control{height:46px}.submit{height:47px}.notice{margin-top:22px}.meta{margin-top:14px}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#acesso">Pular para o formulário de acesso</a>
+  <main class="shell">
+    <section class="story" aria-labelledby="apresentacao"><div class="grid"></div>
+      <div class="brand"><div class="mark" aria-hidden="true">AC</div><div><strong>Atlas Carteira</strong><span>Laboratório financeiro</span></div></div>
+      <div class="hero"><div class="eyebrow">Controle com contexto</div><h1 id="apresentacao">Sua carteira simulada, organizada com clareza.</h1><p>Uma experiência acadêmica para registrar operações, acompanhar posições e entender os dados disponíveis — sem executar ordens no mercado.</p>
+        <div class="signal" aria-label="Princípios do produto"><div><b>Dados rastreáveis</b><span>Fonte e horário acompanham cada cotação.</span></div><div><b>Decisões conscientes</b><span>Estados e limitações ficam sempre visíveis.</span></div><div><b>Acesso protegido</b><span>Sessão segura administrada pelo servidor.</span></div></div>
+      </div>
+      <p class="story-foot">Protótipo demonstrativo de interface. Nenhuma credencial real está representada nesta tela.</p>
+    </section>
+    <section class="access" id="acesso" aria-labelledby="titulo-login"><div class="access-inner">
+      <span class="security"><i aria-hidden="true"></i> ACESSO ADMINISTRATIVO PROTEGIDO</span>
+      <h2 id="titulo-login">Acesse o Atlas</h2><p class="lead">Use a credencial administrativa configurada para este ambiente.</p>
+      <form novalidate>
+        <div class="field"><label for="usuario">Usuário</label><div class="control-wrap"><input class="control" id="usuario" name="username" autocomplete="username" placeholder="Informe seu usuário"></div></div>
+        <div class="field"><label for="senha">Senha</label><div class="control-wrap"><input class="control password" id="senha" name="password" type="password" autocomplete="current-password" placeholder="Informe sua senha"><button class="reveal" type="button" aria-controls="senha" aria-pressed="false">Mostrar</button></div><span class="hint">A mensagem de erro não confirma se o usuário existe.</span></div>
+        <button class="submit" type="submit">Entrar com segurança</button>
+      </form>
+      <div class="privacy"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 10V7a5 5 0 0 1 10 0v3M5 10h14v10H5z"/></svg><span>A sessão usa cookie HttpOnly. A senha e os dados de autenticação não são armazenados no navegador.</span></div>
+      <aside class="notice"><strong>Finalidade acadêmica</strong>O Atlas Carteira não executa ordens e não constitui recomendação de investimento.</aside>
+      <p class="meta">Sem cadastro público, recuperação por e-mail ou login social nesta fase.</p>
+    </div></section>
+  </main>
+  <script>const b=document.querySelector('.reveal'),p=document.querySelector('#senha');b.addEventListener('click',()=>{const show=p.type==='password';p.type=show?'text':'password';b.textContent=show?'Ocultar':'Mostrar';b.setAttribute('aria-pressed',String(show));});document.querySelector('form').addEventListener('submit',e=>e.preventDefault());</script>
+</body>
+</html>
