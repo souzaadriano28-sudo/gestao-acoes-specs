@@ -39,13 +39,13 @@
 
 ## 5. Frontend foundations and components
 
-- [ ] 5.1 Create design tokens, global typography, spacing, focus and color styles from the design and verify automated contrast plus forced-colors/reduced-motion snapshots.
-- [ ] 5.2 Implement the responsive `AppShell`, skip link, desktop rail, mobile navigation and 404 route; verify route-active semantics and keyboard access in component tests.
-- [ ] 5.3 Add typed API models/services for new read endpoints and verify HttpTestingController tests cover URL, params, payload shapes, optional fields and error envelopes.
+- [x] 5.1 Create design tokens, global typography, spacing, focus and color styles from the design and verify automated contrast plus forced-colors/reduced-motion snapshots.
+- [x] 5.2 Implement the responsive `AppShell`, skip link, desktop rail, mobile navigation and 404 route; verify route-active semantics and keyboard access in component tests.
+- [x] 5.3 Add typed API models/services for new read endpoints and verify HttpTestingController tests cover URL, params, payload shapes, optional fields and error envelopes.
 - [ ] 5.4 Implement discriminated async state/facade primitives and verify unit tests prevent simultaneous empty/error/loading states and never retry mutations automatically.
-- [ ] 5.5 Implement `CurrencyValue`, `PercentageValue` and `DateTimeValue` components/utilities and verify pt-BR, BRL/USD, signs, unavailable values, offset timestamps and legacy no-timezone labels.
-- [ ] 5.6 Implement `SummaryCard`, `StatusBadge`, `DataStatus` and `QuoteProvenance` and verify positive/negative meaning is available without color and source/instants are exposed.
-- [ ] 5.7 Implement `AsyncRegion`, skeleton, empty state, stale state, error summary and toast/live region; verify announcements, retry-read behavior and layout-space reservation.
+- [x] 5.5 Implement `CurrencyValue`, `PercentageValue` and `DateTimeValue` components/utilities and verify pt-BR, BRL/USD, signs, unavailable values, offset timestamps and legacy no-timezone labels.
+- [x] 5.6 Implement `SummaryCard`, `StatusBadge`, `DataStatus` and `QuoteProvenance` and verify positive/negative meaning is available without color and source/instants are exposed.
+- [x] 5.7 Implement `AsyncRegion`, skeleton, empty state, stale state, error summary and toast/live region; verify announcements, retry-read behavior and layout-space reservation.
 - [ ] 5.8 Implement shared semantic table and mobile row-card pattern plus pagination; verify header associations, labels, long content and no loss of essential fields at 320 px.
 - [ ] 5.9 Implement hover, focus-visible, active, disabled, invalid and pending tokens for interactive components and verify contrast plus keyboard equivalence in component snapshots.
 
