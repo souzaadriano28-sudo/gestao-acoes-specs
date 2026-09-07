@@ -1,0 +1,18 @@
+{
+  "generatedAt": "2026-09-07T01:20:00-03:00",
+  "viewports": [
+    { "width": 1440, "height": 1024 },
+    { "width": 768, "height": 1024 },
+    { "width": 720, "height": 900 },
+    { "width": 390, "height": 844 },
+    { "width": 320, "height": 568 }
+  ],
+  "authenticatedRoutes": ["dashboard", "carteira", "acoes", "corretoras", "operacoes"],
+  "playwright": { "passed": 7, "failed": 0 },
+  "axeViolations": 0,
+  "horizontalOverflowFailures": 0,
+  "mobileNavigationInteractiveOverlaps": 0,
+  "zoom200PercentFailures": 0,
+  "testedStates": ["loading", "empty", "error", "partial", "stale", "unavailable", "session-expired", "not-found"],
+  "notes": "Fixtures sintéticas aparecem somente na suíte E2E. As capturas finais usam o backend real ou interceptações de contrato explicitamente controladas pelos testes."
+}

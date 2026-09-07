@@ -1,0 +1,926 @@
+[
+  {
+    "id": "measure-dashboard-1440",
+    "name": "Dashboard | Atlas Carteira",
+    "path": "/dashboard",
+    "viewport": {
+      "width": 1440,
+      "height": 1024
+    },
+    "scrollWidth": 1440,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nAC\nAtlas Carteira\nAcompanhamento acadêmico\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações\n\nSistema acadêmico. Não executa ordens nem constitui recomendação de investimento.\n\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nDashboard\n\nRESUMO DA CARTEIRA\n\nDashboard\n\nAcompanhe sua carteira simulada com valores e fontes calculados pelo backend.\n\nAtualizar dados\nRegistrar operação simulada\nPatrimônio estimado\n✓\nDisponível\n\nR$ 1.775,00\n\nConsolidado em BRL\n\nCusto das posições\n✓\nDisponível\n\nR$ 1.775,00\n\nCalculado pelo backend\n\nResultado não realizado\n✓\nDisponível\n\nR$ 0,00\n\nValor absoluto confirmado\n\nPosições ativas\n✓\nDisponível\n\n2\n\nPosições ativo–corretora\nPrincipais posições\n\nValores nativos, sem somas calculadas no navegador.\n\nVer carteira\nATIVO\tCORRETORA\tQUANTIDADE\tPREÇO MÉDIO\tCOTAÇÃO\tVALOR ATUAL\tRESULTADO\nAAPL\nAMERICANO · USD\n\tCorretora Teste\t3\tUS$ 100,00\tUS$ 100,00\tUS$ 300,00\tUS$ 0,00\nPETR4\nBRASIL · BRL\n\tCorretora Teste\t10\tR$ 20,00\tR$ 20,00\tR$ 200,00\tR$ 0,00\nMovimentações recentes\n\nHistórico persistido pelo backend.\n\nVer todas\n↑\nVenda simulada · PETR4\n07/09/2026, 02:40:14 BRT · Corretora Teste\n2 × R$ 20,00\n↓\nCompra simulada · AAPL\n07/09/2026, 02:40:14 BRT · Corretora Teste\n3 × US$ 100,00\n↓\nCompra simulada · PETR4\n07/09/2026, 02:40:13 BRT · Corretora Teste\n12 × R$ 20,00\nQualidade dos dados\n\nFonte, referência, coleta e atualidade.\n\nTWELVE_DATA\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nBRAPI\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nCâmbio USD/BRL\n✓\nDisponível\n\nBANCO_CENTRAL_DO_BRASIL_PTAX · BCB_PTAX_CLOSING_REFERENCE\n\nReferência\n06/09/2026, 13:00:00 BRT\nColeta\n06/09/2026, 23:40:14 BRT\n\nLeitura consolidada em 06/09/2026, 23:56:01 BRT.\n\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.",
+    "headings": [
+      "H1:Dashboard",
+      "H2:Patrimônio estimado",
+      "H2:Custo das posições",
+      "H2:Resultado não realizado",
+      "H2:Posições ativas",
+      "H2:Principais posições",
+      "H2:Movimentações recentes",
+      "H2:Qualidade dos dados"
+    ],
+    "mainRect": {
+      "x": 248,
+      "y": 72,
+      "width": 1192,
+      "height": 1365.390625,
+      "top": 72,
+      "right": 1440,
+      "bottom": 1437.390625,
+      "left": 248
+    },
+    "controls": 13
+  },
+  {
+    "id": "measure-carteira-1440",
+    "name": "Carteira | Atlas Carteira",
+    "path": "/carteira",
+    "viewport": {
+      "width": 1440,
+      "height": 1024
+    },
+    "scrollWidth": 1440,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nAC\nAtlas Carteira\nAcompanhamento acadêmico\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações\n\nSistema acadêmico. Não executa ordens nem constitui recomendação de investimento.\n\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nCarteira\n\nPOSIÇÕES DETALHADAS\n\nCarteira\n\nCada linha representa um ativo em uma corretora. Valores financeiros são recebidos prontos do backend.\n\nAtualizar posições\nLocalizar posições\n\nMercado e corretora filtram no servidor. Busca e ordenação atuam na página atual.\n\nBuscar ativo ou corretora\nMercado\nTodos\nBrasil\nAmericano\nCorretora\nTodas\nCorretora Teste\nOrdenar página por\nAtivo\nCorretora\nMaior quantidade\nAplicar\nLimpar\n\n2 posição(ões) no resultado do servidor. Exibindo 2 nesta página.\n\nATIVO\tCORRETORA\tQUANTIDADE\tPREÇO MÉDIO\tCOTAÇÃO\tVALOR ATUAL\tRESULTADO\tQUALIDADE\nAAPL\nAMERICANO · USD\n\tCorretora Teste\t3\tUS$ 100,00\tUS$ 100,00\tUS$ 300,00\tUS$ 0,00\t\n✓\nDisponível\nPETR4\nBRASIL · BRL\n\tCorretora Teste\t10\tR$ 20,00\tR$ 20,00\tR$ 200,00\tR$ 0,00\t\n✓\nDisponível\nAnterior\nPágina 1 de 1\nPróxima\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.",
+    "headings": [
+      "H1:Carteira",
+      "H2:Localizar posições"
+    ],
+    "mainRect": {
+      "x": 248,
+      "y": 72,
+      "width": 1192,
+      "height": 864,
+      "top": 72,
+      "right": 1440,
+      "bottom": 936,
+      "left": 248
+    },
+    "controls": 18
+  },
+  {
+    "id": "measure-operacoes-1440",
+    "name": "Operações | Atlas Carteira",
+    "path": "/operacoes",
+    "viewport": {
+      "width": 1440,
+      "height": 1024
+    },
+    "scrollWidth": 1440,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nAC\nAtlas Carteira\nAcompanhamento acadêmico\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações\n\nSistema acadêmico. Não executa ordens nem constitui recomendação de investimento.\n\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nOperações\n\nREGISTROS SIMULADOS\n\nOperações\n\nRegistre compras e vendas acadêmicas. Nenhuma ordem é enviada ao mercado.\n\nReconciliar leituras\nNova operação simulada\n\nO backend consulta o preço aplicável; não existe preço garantido, execução, liquidação ou custódia real.\n\nTipo de registro\nCompra simulada\nVenda simulada\nAtivo\nSelecione\nPETR4 · BRASIL\nAAPL · AMERICANO\nMercado do ativo\nCorretora\nSelecione\nCorretora Teste\nQuantidade inteira\nEntre 1 e 2.147.483.647.\nRevisar compra simulada\nMovimentações\n\nHistórico paginado em ordem confirmada pelo backend.\n\nAtualizar histórico\nTipo\nTodos\nCompra\nVenda\nTicker\nCorretora\nTodas\nCorretora Teste\nDesde\nAté\nFiltrar\nLimpar\nOPERAÇÃO\tATIVO\tCORRETORA\tQUANTIDADE\tPREÇO NATIVO\tDATA\tORIGEM HISTÓRICA\n\n↑\nVENDA SIMULADA\n\tPETR4\nBRASIL\n\tCorretora Teste\t2\tR$ 20,00\t07/09/2026, 02:40:14 BRT\tOrigem não informada\n\n↓\nCOMPRA SIMULADA\n\tAAPL\nAMERICANO\n\tCorretora Teste\t3\tUS$ 100,00\t07/09/2026, 02:40:14 BRT\tOrigem não informada\n\n↓\nCOMPRA SIMULADA\n\tPETR4\nBRASIL\n\tCorretora Teste\t12\tR$ 20,00\t07/09/2026, 02:40:13 BRT\tOrigem não informada\nAnterior\nPágina 1 de 1\nPróxima\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.",
+    "headings": [
+      "H1:Operações",
+      "H2:Nova operação simulada",
+      "H2:Movimentações"
+    ],
+    "mainRect": {
+      "x": 248,
+      "y": 72,
+      "width": 1192,
+      "height": 1276.828125,
+      "top": 72,
+      "right": 1440,
+      "bottom": 1348.828125,
+      "left": 248
+    },
+    "controls": 27
+  },
+  {
+    "id": "measure-acoes-1440",
+    "name": "Ações | Atlas Carteira",
+    "path": "/acoes",
+    "viewport": {
+      "width": 1440,
+      "height": 1024
+    },
+    "scrollWidth": 1440,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nAC\nAtlas Carteira\nAcompanhamento acadêmico\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações\n\nSistema acadêmico. Não executa ordens nem constitui recomendação de investimento.\n\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nAções\n\nCATÁLOGO DE ATIVOS\n\nAções\n\nCadastre ativos para a simulação e atualize suas cotações com feedback rastreável.\n\nAtualizar lista\nCadastrar ativo\n\nUse o ticker canônico do mercado selecionado. O preço nunca é informado manualmente.\n\nTicker\nEx.: PETR4 ou AAPL\nMercado\nBrasil (B3)\nAmericano\nCadastrar ativo\nAtivos monitorados\n\nCotações legadas sem proveniência aparecem como origem não informada.\n\nBuscar\nATIVO\tMERCADO\tCOTAÇÃO\tREFERÊNCIA\tORIGEM, COLETA E FRESHNESS\tAÇÃO\nPETR4\nEMPRESA NÃO DETALHADA\n\tBRASIL\tR$ 20,00\t07/09/2026, 02:40:13 · fuso não fornecido\t\n?\nOrigem não informada\nColeta e freshness indisponíveis no contrato legado.\n\tAtualizar cotação\nAAPL\nEMPRESA NÃO DETALHADA\n\tAMERICANO\tUS$ 100,00\t07/09/2026, 02:40:13 · fuso não fornecido\t\n?\nOrigem não informada\nColeta e freshness indisponíveis no contrato legado.\n\tAtualizar cotação\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.",
+    "headings": [
+      "H1:Ações",
+      "H2:Cadastrar ativo",
+      "H2:Ativos monitorados"
+    ],
+    "mainRect": {
+      "x": 248,
+      "y": 72,
+      "width": 1192,
+      "height": 864,
+      "top": 72,
+      "right": 1440,
+      "bottom": 936,
+      "left": 248
+    },
+    "controls": 16
+  },
+  {
+    "id": "measure-corretoras-1440",
+    "name": "Corretoras | Atlas Carteira",
+    "path": "/corretoras",
+    "viewport": {
+      "width": 1440,
+      "height": 1024
+    },
+    "scrollWidth": 1440,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nAC\nAtlas Carteira\nAcompanhamento acadêmico\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações\n\nSistema acadêmico. Não executa ordens nem constitui recomendação de investimento.\n\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nCorretoras\n\nINSTITUIÇÕES DA SIMULAÇÃO\n\nCorretoras\n\nDados empresariais e evidência regulatória são apresentados separadamente, sem inferências por CNAE.\n\nAtualizar evidências\nAtualizar lista\nCadastrar corretora\n\nO cadastro serve à simulação. Situação empresarial ativa não comprova autorização regulatória.\n\nCNPJ\n14 dígitos; pontuação é opcional.\nCEP\nCadastrar corretora\nCorretoras cadastradas\n\nSomente dados presentes no contrato são exibidos.\n\nINSTITUIÇÃO\tCNPJ\tLOCALIDADE\tSITUAÇÃO EMPRESARIAL\tEVIDÊNCIA REGULATÓRIA\nCORRETORA TESTE\t11.222.333/0001-81\tSão Paulo /SP\tATIVA\nFonte: BRASIL_API\n\t\n?\nNão consultada\nFonte: Origem não informada\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.",
+    "headings": [
+      "H1:Corretoras",
+      "H2:Cadastrar corretora",
+      "H2:Corretoras cadastradas"
+    ],
+    "mainRect": {
+      "x": 248,
+      "y": 72,
+      "width": 1192,
+      "height": 864,
+      "top": 72,
+      "right": 1440,
+      "bottom": 936,
+      "left": 248
+    },
+    "controls": 14
+  },
+  {
+    "id": "measure-dashboard-768",
+    "name": "Dashboard | Atlas Carteira",
+    "path": "/dashboard",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "scrollWidth": 768,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nAC\nAtlas Carteira\nAcompanhamento acadêmico\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações\n\nSistema acadêmico. Não executa ordens nem constitui recomendação de investimento.\n\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nDashboard\n\nRESUMO DA CARTEIRA\n\nDashboard\n\nAcompanhe sua carteira simulada com valores e fontes calculados pelo backend.\n\nAtualizar dados\nRegistrar operação simulada\nPatrimônio estimado\n✓\nDisponível\n\nR$ 1.775,00\n\nConsolidado em BRL\n\nCusto das posições\n✓\nDisponível\n\nR$ 1.775,00\n\nCalculado pelo backend\n\nResultado não realizado\n✓\nDisponível\n\nR$ 0,00\n\nValor absoluto confirmado\n\nPosições ativas\n✓\nDisponível\n\n2\n\nPosições ativo–corretora\nPrincipais posições\n\nValores nativos, sem somas calculadas no navegador.\n\nVer carteira\nATIVO\tCORRETORA\tQUANTIDADE\tPREÇO MÉDIO\tCOTAÇÃO\tVALOR ATUAL\tRESULTADO\nAAPL\nAMERICANO · USD\n\tCorretora Teste\t3\tUS$ 100,00\tUS$ 100,00\tUS$ 300,00\tUS$ 0,00\nPETR4\nBRASIL · BRL\n\tCorretora Teste\t10\tR$ 20,00\tR$ 20,00\tR$ 200,00\tR$ 0,00\nMovimentações recentes\n\nHistórico persistido pelo backend.\n\nVer todas\n↑\nVenda simulada · PETR4\n07/09/2026, 02:40:14 BRT · Corretora Teste\n2 × R$ 20,00\n↓\nCompra simulada · AAPL\n07/09/2026, 02:40:14 BRT · Corretora Teste\n3 × US$ 100,00\n↓\nCompra simulada · PETR4\n07/09/2026, 02:40:13 BRT · Corretora Teste\n12 × R$ 20,00\nQualidade dos dados\n\nFonte, referência, coleta e atualidade.\n\nTWELVE_DATA\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nBRAPI\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nCâmbio USD/BRL\n✓\nDisponível\n\nBANCO_CENTRAL_DO_BRASIL_PTAX · BCB_PTAX_CLOSING_REFERENCE\n\nReferência\n06/09/2026, 13:00:00 BRT\nColeta\n06/09/2026, 23:40:14 BRT\n\nLeitura consolidada em 06/09/2026, 23:56:03 BRT.\n\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.",
+    "headings": [
+      "H1:Dashboard",
+      "H2:Patrimônio estimado",
+      "H2:Custo das posições",
+      "H2:Resultado não realizado",
+      "H2:Posições ativas",
+      "H2:Principais posições",
+      "H2:Movimentações recentes",
+      "H2:Qualidade dos dados"
+    ],
+    "mainRect": {
+      "x": 84,
+      "y": 72,
+      "width": 684,
+      "height": 1935.25,
+      "top": 72,
+      "right": 768,
+      "bottom": 2007.25,
+      "left": 84
+    },
+    "controls": 13
+  },
+  {
+    "id": "measure-carteira-768",
+    "name": "Carteira | Atlas Carteira",
+    "path": "/carteira",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "scrollWidth": 768,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nAC\nAtlas Carteira\nAcompanhamento acadêmico\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações\n\nSistema acadêmico. Não executa ordens nem constitui recomendação de investimento.\n\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nCarteira\n\nPOSIÇÕES DETALHADAS\n\nCarteira\n\nCada linha representa um ativo em uma corretora. Valores financeiros são recebidos prontos do backend.\n\nAtualizar posições\nLocalizar posições\n\nMercado e corretora filtram no servidor. Busca e ordenação atuam na página atual.\n\nBuscar ativo ou corretora\nMercado\nTodos\nBrasil\nAmericano\nCorretora\nTodas\nCorretora Teste\nOrdenar página por\nAtivo\nCorretora\nMaior quantidade\nAplicar\nLimpar\n\n2 posição(ões) no resultado do servidor. Exibindo 2 nesta página.\n\nATIVO\tCORRETORA\tQUANTIDADE\tPREÇO MÉDIO\tCOTAÇÃO\tVALOR ATUAL\tRESULTADO\tQUALIDADE\nAAPL\nAMERICANO · USD\n\tCorretora Teste\t3\tUS$ 100,00\tUS$ 100,00\tUS$ 300,00\tUS$ 0,00\t\n✓\nDisponível\nPETR4\nBRASIL · BRL\n\tCorretora Teste\t10\tR$ 20,00\tR$ 20,00\tR$ 200,00\tR$ 0,00\t\n✓\nDisponível\nAnterior\nPágina 1 de 1\nPróxima\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.",
+    "headings": [
+      "H1:Carteira",
+      "H2:Localizar posições"
+    ],
+    "mainRect": {
+      "x": 84,
+      "y": 72,
+      "width": 684,
+      "height": 899.25,
+      "top": 72,
+      "right": 768,
+      "bottom": 971.25,
+      "left": 84
+    },
+    "controls": 18
+  },
+  {
+    "id": "measure-operacoes-768",
+    "name": "Operações | Atlas Carteira",
+    "path": "/operacoes",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "scrollWidth": 768,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nAC\nAtlas Carteira\nAcompanhamento acadêmico\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações\n\nSistema acadêmico. Não executa ordens nem constitui recomendação de investimento.\n\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nOperações\n\nREGISTROS SIMULADOS\n\nOperações\n\nRegistre compras e vendas acadêmicas. Nenhuma ordem é enviada ao mercado.\n\nReconciliar leituras\nNova operação simulada\n\nO backend consulta o preço aplicável; não existe preço garantido, execução, liquidação ou custódia real.\n\nTipo de registro\nCompra simulada\nVenda simulada\nAtivo\nSelecione\nPETR4 · BRASIL\nAAPL · AMERICANO\nMercado do ativo\nCorretora\nSelecione\nCorretora Teste\nQuantidade inteira\nEntre 1 e 2.147.483.647.\nRevisar compra simulada\nMovimentações\n\nHistórico paginado em ordem confirmada pelo backend.\n\nAtualizar histórico\nTipo\nTodos\nCompra\nVenda\nTicker\nCorretora\nTodas\nCorretora Teste\nDesde\nAté\nFiltrar\nLimpar\nOPERAÇÃO\tATIVO\tCORRETORA\tQUANTIDADE\tPREÇO NATIVO\tDATA\tORIGEM HISTÓRICA\n\n↑\nVENDA SIMULADA\n\tPETR4\nBRASIL\n\tCorretora Teste\t2\tR$ 20,00\t07/09/2026, 02:40:14 BRT\tOrigem não informada\n\n↓\nCOMPRA SIMULADA\n\tAAPL\nAMERICANO\n\tCorretora Teste\t3\tUS$ 100,00\t07/09/2026, 02:40:14 BRT\tOrigem não informada\n\n↓\nCOMPRA SIMULADA\n\tPETR4\nBRASIL\n\tCorretora Teste\t12\tR$ 20,00\t07/09/2026, 02:40:13 BRT\tOrigem não informada\nAnterior\nPágina 1 de 1\nPróxima\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.",
+    "headings": [
+      "H1:Operações",
+      "H2:Nova operação simulada",
+      "H2:Movimentações"
+    ],
+    "mainRect": {
+      "x": 84,
+      "y": 72,
+      "width": 684,
+      "height": 1468.234375,
+      "top": 72,
+      "right": 768,
+      "bottom": 1540.234375,
+      "left": 84
+    },
+    "controls": 27
+  },
+  {
+    "id": "measure-acoes-768",
+    "name": "Ações | Atlas Carteira",
+    "path": "/acoes",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "scrollWidth": 768,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nAC\nAtlas Carteira\nAcompanhamento acadêmico\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações\n\nSistema acadêmico. Não executa ordens nem constitui recomendação de investimento.\n\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nAções\n\nCATÁLOGO DE ATIVOS\n\nAções\n\nCadastre ativos para a simulação e atualize suas cotações com feedback rastreável.\n\nAtualizar lista\nCadastrar ativo\n\nUse o ticker canônico do mercado selecionado. O preço nunca é informado manualmente.\n\nTicker\nEx.: PETR4 ou AAPL\nMercado\nBrasil (B3)\nAmericano\nCadastrar ativo\nAtivos monitorados\n\nCotações legadas sem proveniência aparecem como origem não informada.\n\nBuscar\nATIVO\tMERCADO\tCOTAÇÃO\tREFERÊNCIA\tORIGEM, COLETA E FRESHNESS\tAÇÃO\nPETR4\nEMPRESA NÃO DETALHADA\n\tBRASIL\tR$ 20,00\t07/09/2026, 02:40:13 · fuso não fornecido\t\n?\nOrigem não informada\nColeta e freshness indisponíveis no contrato legado.\n\tAtualizar cotação\nAAPL\nEMPRESA NÃO DETALHADA\n\tAMERICANO\tUS$ 100,00\t07/09/2026, 02:40:13 · fuso não fornecido\t\n?\nOrigem não informada\nColeta e freshness indisponíveis no contrato legado.\n\tAtualizar cotação\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.",
+    "headings": [
+      "H1:Ações",
+      "H2:Cadastrar ativo",
+      "H2:Ativos monitorados"
+    ],
+    "mainRect": {
+      "x": 84,
+      "y": 72,
+      "width": 684,
+      "height": 901.234375,
+      "top": 72,
+      "right": 768,
+      "bottom": 973.234375,
+      "left": 84
+    },
+    "controls": 16
+  },
+  {
+    "id": "measure-corretoras-768",
+    "name": "Corretoras | Atlas Carteira",
+    "path": "/corretoras",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "scrollWidth": 768,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nAC\nAtlas Carteira\nAcompanhamento acadêmico\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações\n\nSistema acadêmico. Não executa ordens nem constitui recomendação de investimento.\n\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nCorretoras\n\nINSTITUIÇÕES DA SIMULAÇÃO\n\nCorretoras\n\nDados empresariais e evidência regulatória são apresentados separadamente, sem inferências por CNAE.\n\nAtualizar evidências\nAtualizar lista\nCadastrar corretora\n\nO cadastro serve à simulação. Situação empresarial ativa não comprova autorização regulatória.\n\nCNPJ\n14 dígitos; pontuação é opcional.\nCEP\nCadastrar corretora\nCorretoras cadastradas\n\nSomente dados presentes no contrato são exibidos.\n\nINSTITUIÇÃO\tCNPJ\tLOCALIDADE\tSITUAÇÃO EMPRESARIAL\tEVIDÊNCIA REGULATÓRIA\nCORRETORA TESTE\t11.222.333/0001-81\tSão Paulo /SP\tATIVA\nFonte: BRASIL_API\n\t\n?\nNão consultada\nFonte: Origem não informada\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.",
+    "headings": [
+      "H1:Corretoras",
+      "H2:Cadastrar corretora",
+      "H2:Corretoras cadastradas"
+    ],
+    "mainRect": {
+      "x": 84,
+      "y": 72,
+      "width": 684,
+      "height": 864,
+      "top": 72,
+      "right": 768,
+      "bottom": 936,
+      "left": 84
+    },
+    "controls": 14
+  },
+  {
+    "id": "measure-dashboard-720",
+    "name": "Dashboard | Atlas Carteira",
+    "path": "/dashboard",
+    "viewport": {
+      "width": 720,
+      "height": 900
+    },
+    "scrollWidth": 720,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nDashboard\n\nRESUMO DA CARTEIRA\n\nDashboard\n\nAcompanhe sua carteira simulada com valores e fontes calculados pelo backend.\n\nAtualizar dados\nRegistrar operação simulada\nPatrimônio estimado\n✓\nDisponível\n\nR$ 1.775,00\n\nConsolidado em BRL\n\nCusto das posições\n✓\nDisponível\n\nR$ 1.775,00\n\nCalculado pelo backend\n\nResultado não realizado\n✓\nDisponível\n\nR$ 0,00\n\nValor absoluto confirmado\n\nPosições ativas\n✓\nDisponível\n\n2\n\nPosições ativo–corretora\nPrincipais posições\n\nValores nativos, sem somas calculadas no navegador.\n\nVer carteira\nAAPL\nCorretora Teste · USD\nUS$ 300,00\nQuantidade\n3\nPreço médio\nUS$ 100,00\nCotação\nUS$ 100,00\nResultado\nUS$ 0,00\nPETR4\nCorretora Teste · BRL\nR$ 200,00\nQuantidade\n10\nPreço médio\nR$ 20,00\nCotação\nR$ 20,00\nResultado\nR$ 0,00\nMovimentações recentes\n\nHistórico persistido pelo backend.\n\nVer todas\n↑\nVenda simulada · PETR4\n07/09/2026, 02:40:14 BRT · Corretora Teste\n2 × R$ 20,00\n↓\nCompra simulada · AAPL\n07/09/2026, 02:40:14 BRT · Corretora Teste\n3 × US$ 100,00\n↓\nCompra simulada · PETR4\n07/09/2026, 02:40:13 BRT · Corretora Teste\n12 × R$ 20,00\nQualidade dos dados\n\nFonte, referência, coleta e atualidade.\n\nTWELVE_DATA\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nBRAPI\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nCâmbio USD/BRL\n✓\nDisponível\n\nBANCO_CENTRAL_DO_BRASIL_PTAX · BCB_PTAX_CLOSING_REFERENCE\n\nReferência\n06/09/2026, 13:00:00 BRT\nColeta\n06/09/2026, 23:40:14 BRT\n\nLeitura consolidada em 06/09/2026, 23:56:05 BRT.\n\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Dashboard",
+      "H2:Patrimônio estimado",
+      "H2:Custo das posições",
+      "H2:Resultado não realizado",
+      "H2:Posições ativas",
+      "H2:Principais posições",
+      "H2:Movimentações recentes",
+      "H2:Qualidade dos dados"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 720,
+      "height": 2261.109375,
+      "top": 69,
+      "right": 720,
+      "bottom": 2330.109375,
+      "left": 0
+    },
+    "controls": 12
+  },
+  {
+    "id": "measure-carteira-720",
+    "name": "Carteira | Atlas Carteira",
+    "path": "/carteira",
+    "viewport": {
+      "width": 720,
+      "height": 900
+    },
+    "scrollWidth": 720,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nCarteira\n\nPOSIÇÕES DETALHADAS\n\nCarteira\n\nCada linha representa um ativo em uma corretora. Valores financeiros são recebidos prontos do backend.\n\nAtualizar posições\nLocalizar posições\n\nMercado e corretora filtram no servidor. Busca e ordenação atuam na página atual.\n\nBuscar ativo ou corretora\nMercado\nTodos\nBrasil\nAmericano\nCorretora\nTodas\nCorretora Teste\nOrdenar página por\nAtivo\nCorretora\nMaior quantidade\nAplicar\nLimpar\n\n2 posição(ões) no resultado do servidor. Exibindo 2 nesta página.\n\nAAPL\nAMERICANO · Corretora Teste\n✓\nDisponível\nQuantidade\n3\nMoeda\nUSD\nPreço médio\nUS$ 100,00\nCotação\nUS$ 100,00\nValor atual\nUS$ 300,00\nResultado\nUS$ 0,00\nOrigem da cotação\nPETR4\nBRASIL · Corretora Teste\n✓\nDisponível\nQuantidade\n10\nMoeda\nBRL\nPreço médio\nR$ 20,00\nCotação\nR$ 20,00\nValor atual\nR$ 200,00\nResultado\nR$ 0,00\nOrigem da cotação\nAnterior\nPágina 1 de 1\nPróxima\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Carteira",
+      "H2:Localizar posições"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 720,
+      "height": 1289.109375,
+      "top": 69,
+      "right": 720,
+      "bottom": 1358.109375,
+      "left": 0
+    },
+    "controls": 17
+  },
+  {
+    "id": "measure-operacoes-720",
+    "name": "Operações | Atlas Carteira",
+    "path": "/operacoes",
+    "viewport": {
+      "width": 720,
+      "height": 900
+    },
+    "scrollWidth": 720,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nOperações\n\nREGISTROS SIMULADOS\n\nOperações\n\nRegistre compras e vendas acadêmicas. Nenhuma ordem é enviada ao mercado.\n\nReconciliar leituras\nNova operação simulada\n\nO backend consulta o preço aplicável; não existe preço garantido, execução, liquidação ou custódia real.\n\nTipo de registro\nCompra simulada\nVenda simulada\nAtivo\nSelecione\nPETR4 · BRASIL\nAAPL · AMERICANO\nMercado do ativo\nCorretora\nSelecione\nCorretora Teste\nQuantidade inteira\nEntre 1 e 2.147.483.647.\nRevisar compra simulada\nMovimentações\n\nHistórico paginado em ordem confirmada pelo backend.\n\nAtualizar histórico\nTipo\nTodos\nCompra\nVenda\nTicker\nCorretora\nTodas\nCorretora Teste\nDesde\nAté\nFiltrar\nLimpar\nPETR4\nCorretora Teste\n•\nVenda simulada\nQuantidade\n2\nMercado\nBRASIL\nPreço nativo\nR$ 20,00\nData\n07/09/2026, 02:40:14 BRT\nOrigem histórica\nOrigem não informada\nAAPL\nCorretora Teste\n•\nCompra simulada\nQuantidade\n3\nMercado\nAMERICANO\nPreço nativo\nUS$ 100,00\nData\n07/09/2026, 02:40:14 BRT\nOrigem histórica\nOrigem não informada\nPETR4\nCorretora Teste\n•\nCompra simulada\nQuantidade\n12\nMercado\nBRASIL\nPreço nativo\nR$ 20,00\nData\n07/09/2026, 02:40:13 BRT\nOrigem histórica\nOrigem não informada\nAnterior\nPágina 1 de 1\nPróxima\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Operações",
+      "H2:Nova operação simulada",
+      "H2:Movimentações"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 720,
+      "height": 2145.09375,
+      "top": 69,
+      "right": 720,
+      "bottom": 2214.09375,
+      "left": 0
+    },
+    "controls": 26
+  },
+  {
+    "id": "measure-acoes-720",
+    "name": "Ações | Atlas Carteira",
+    "path": "/acoes",
+    "viewport": {
+      "width": 720,
+      "height": 900
+    },
+    "scrollWidth": 720,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nAções\n\nCATÁLOGO DE ATIVOS\n\nAções\n\nCadastre ativos para a simulação e atualize suas cotações com feedback rastreável.\n\nAtualizar lista\nCadastrar ativo\n\nUse o ticker canônico do mercado selecionado. O preço nunca é informado manualmente.\n\nTicker\nEx.: PETR4 ou AAPL\nMercado\nBrasil (B3)\nAmericano\nCadastrar ativo\nAtivos monitorados\n\nCotações legadas sem proveniência aparecem como origem não informada.\n\nBuscar\nPETR4\nEmpresa não detalhada\nR$ 20,00\nMercado\nBRASIL\nMoeda\nBRL\nReferência\n07/09/2026, 02:40:13 · fuso não fornecido\nOrigem\nOrigem não informada\nTipo de fonte\nIndisponível\nColeta\nIndisponível\n\nColeta e freshness indisponíveis no contrato legado.\n\nAtualizar cotação\nAAPL\nEmpresa não detalhada\nUS$ 100,00\nMercado\nAMERICANO\nMoeda\nUSD\nReferência\n07/09/2026, 02:40:13 · fuso não fornecido\nOrigem\nOrigem não informada\nTipo de fonte\nIndisponível\nColeta\nIndisponível\n\nColeta e freshness indisponíveis no contrato legado.\n\nAtualizar cotação\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Ações",
+      "H2:Cadastrar ativo",
+      "H2:Ativos monitorados"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 720,
+      "height": 1317.09375,
+      "top": 69,
+      "right": 720,
+      "bottom": 1386.09375,
+      "left": 0
+    },
+    "controls": 15
+  },
+  {
+    "id": "measure-corretoras-720",
+    "name": "Corretoras | Atlas Carteira",
+    "path": "/corretoras",
+    "viewport": {
+      "width": 720,
+      "height": 900
+    },
+    "scrollWidth": 720,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nCorretoras\n\nINSTITUIÇÕES DA SIMULAÇÃO\n\nCorretoras\n\nDados empresariais e evidência regulatória são apresentados separadamente, sem inferências por CNAE.\n\nAtualizar evidências\nAtualizar lista\nCadastrar corretora\n\nO cadastro serve à simulação. Situação empresarial ativa não comprova autorização regulatória.\n\nCNPJ\n14 dígitos; pontuação é opcional.\nCEP\nCadastrar corretora\nCorretoras cadastradas\n\nSomente dados presentes no contrato são exibidos.\n\nCorretora Teste\n11.222.333/0001-81\n•\nNão consultada\nLocalidade\nSão Paulo /SP\nSituação empresarial\nATIVA\nFonte empresarial\nBRASIL_API\nCategoria regulatória\nNão informada\nFonte regulatória\nOrigem não informada\nReferência\nIndisponível\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Corretoras",
+      "H2:Cadastrar corretora",
+      "H2:Corretoras cadastradas"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 720,
+      "height": 816.09375,
+      "top": 69,
+      "right": 720,
+      "bottom": 885.09375,
+      "left": 0
+    },
+    "controls": 13
+  },
+  {
+    "id": "measure-dashboard-390",
+    "name": "Dashboard | Atlas Carteira",
+    "path": "/dashboard",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scrollWidth": 390,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nDashboard\n\nRESUMO DA CARTEIRA\n\nDashboard\n\nAcompanhe sua carteira simulada com valores e fontes calculados pelo backend.\n\nAtualizar dados\nRegistrar operação simulada\nPatrimônio estimado\n✓\nDisponível\n\nR$ 1.775,00\n\nConsolidado em BRL\n\nCusto das posições\n✓\nDisponível\n\nR$ 1.775,00\n\nCalculado pelo backend\n\nResultado não realizado\n✓\nDisponível\n\nR$ 0,00\n\nValor absoluto confirmado\n\nPosições ativas\n✓\nDisponível\n\n2\n\nPosições ativo–corretora\nPrincipais posições\n\nValores nativos, sem somas calculadas no navegador.\n\nVer carteira\nAAPL\nCorretora Teste · USD\nUS$ 300,00\nQuantidade\n3\nPreço médio\nUS$ 100,00\nCotação\nUS$ 100,00\nResultado\nUS$ 0,00\nPETR4\nCorretora Teste · BRL\nR$ 200,00\nQuantidade\n10\nPreço médio\nR$ 20,00\nCotação\nR$ 20,00\nResultado\nR$ 0,00\nMovimentações recentes\n\nHistórico persistido pelo backend.\n\nVer todas\n↑\nVenda simulada · PETR4\n07/09/2026, 02:40:14 BRT · Corretora Teste\n2 × R$ 20,00\n↓\nCompra simulada · AAPL\n07/09/2026, 02:40:14 BRT · Corretora Teste\n3 × US$ 100,00\n↓\nCompra simulada · PETR4\n07/09/2026, 02:40:13 BRT · Corretora Teste\n12 × R$ 20,00\nQualidade dos dados\n\nFonte, referência, coleta e atualidade.\n\nTWELVE_DATA\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nBRAPI\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nCâmbio USD/BRL\n✓\nDisponível\n\nBANCO_CENTRAL_DO_BRASIL_PTAX · BCB_PTAX_CLOSING_REFERENCE\n\nReferência\n06/09/2026, 13:00:00 BRT\nColeta\n06/09/2026, 23:40:14 BRT\n\nLeitura consolidada em 06/09/2026, 23:56:07 BRT.\n\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Dashboard",
+      "H2:Patrimônio estimado",
+      "H2:Custo das posições",
+      "H2:Resultado não realizado",
+      "H2:Posições ativas",
+      "H2:Principais posições",
+      "H2:Movimentações recentes",
+      "H2:Qualidade dos dados"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 390,
+      "height": 2783.1875,
+      "top": 69,
+      "right": 390,
+      "bottom": 2852.1875,
+      "left": 0
+    },
+    "controls": 12
+  },
+  {
+    "id": "measure-carteira-390",
+    "name": "Carteira | Atlas Carteira",
+    "path": "/carteira",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scrollWidth": 390,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nCarteira\n\nPOSIÇÕES DETALHADAS\n\nCarteira\n\nCada linha representa um ativo em uma corretora. Valores financeiros são recebidos prontos do backend.\n\nAtualizar posições\nLocalizar posições\n\nMercado e corretora filtram no servidor. Busca e ordenação atuam na página atual.\n\nBuscar ativo ou corretora\nMercado\nTodos\nBrasil\nAmericano\nCorretora\nTodas\nCorretora Teste\nOrdenar página por\nAtivo\nCorretora\nMaior quantidade\nAplicar\nLimpar\n\n2 posição(ões) no resultado do servidor. Exibindo 2 nesta página.\n\nAAPL\nAMERICANO · Corretora Teste\n✓\nDisponível\nQuantidade\n3\nMoeda\nUSD\nPreço médio\nUS$ 100,00\nCotação\nUS$ 100,00\nValor atual\nUS$ 300,00\nResultado\nUS$ 0,00\nOrigem da cotação\nPETR4\nBRASIL · Corretora Teste\n✓\nDisponível\nQuantidade\n10\nMoeda\nBRL\nPreço médio\nR$ 20,00\nCotação\nR$ 20,00\nValor atual\nR$ 200,00\nResultado\nR$ 0,00\nOrigem da cotação\nAnterior\nPágina 1 de 1\nPróxima\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Carteira",
+      "H2:Localizar posições"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 390,
+      "height": 2384.1875,
+      "top": 69,
+      "right": 390,
+      "bottom": 2453.1875,
+      "left": 0
+    },
+    "controls": 17
+  },
+  {
+    "id": "measure-operacoes-390",
+    "name": "Operações | Atlas Carteira",
+    "path": "/operacoes",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scrollWidth": 390,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nOperações\n\nREGISTROS SIMULADOS\n\nOperações\n\nRegistre compras e vendas acadêmicas. Nenhuma ordem é enviada ao mercado.\n\nReconciliar leituras\nNova operação simulada\n\nO backend consulta o preço aplicável; não existe preço garantido, execução, liquidação ou custódia real.\n\nTipo de registro\nCompra simulada\nVenda simulada\nAtivo\nSelecione\nPETR4 · BRASIL\nAAPL · AMERICANO\nMercado do ativo\nCorretora\nSelecione\nCorretora Teste\nQuantidade inteira\nEntre 1 e 2.147.483.647.\nRevisar compra simulada\nMovimentações\n\nHistórico paginado em ordem confirmada pelo backend.\n\nAtualizar histórico\nTipo\nTodos\nCompra\nVenda\nTicker\nCorretora\nTodas\nCorretora Teste\nDesde\nAté\nFiltrar\nLimpar\nPETR4\nCorretora Teste\n•\nVenda simulada\nQuantidade\n2\nMercado\nBRASIL\nPreço nativo\nR$ 20,00\nData\n07/09/2026, 02:40:14 BRT\nOrigem histórica\nOrigem não informada\nAAPL\nCorretora Teste\n•\nCompra simulada\nQuantidade\n3\nMercado\nAMERICANO\nPreço nativo\nUS$ 100,00\nData\n07/09/2026, 02:40:14 BRT\nOrigem histórica\nOrigem não informada\nPETR4\nCorretora Teste\n•\nCompra simulada\nQuantidade\n12\nMercado\nBRASIL\nPreço nativo\nR$ 20,00\nData\n07/09/2026, 02:40:13 BRT\nOrigem histórica\nOrigem não informada\nAnterior\nPágina 1 de 1\nPróxima\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Operações",
+      "H2:Nova operação simulada",
+      "H2:Movimentações"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 390,
+      "height": 3367.171875,
+      "top": 69,
+      "right": 390,
+      "bottom": 3436.171875,
+      "left": 0
+    },
+    "controls": 26
+  },
+  {
+    "id": "measure-acoes-390",
+    "name": "Ações | Atlas Carteira",
+    "path": "/acoes",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scrollWidth": 390,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nAções\n\nCATÁLOGO DE ATIVOS\n\nAções\n\nCadastre ativos para a simulação e atualize suas cotações com feedback rastreável.\n\nAtualizar lista\nCadastrar ativo\n\nUse o ticker canônico do mercado selecionado. O preço nunca é informado manualmente.\n\nTicker\nEx.: PETR4 ou AAPL\nMercado\nBrasil (B3)\nAmericano\nCadastrar ativo\nAtivos monitorados\n\nCotações legadas sem proveniência aparecem como origem não informada.\n\nBuscar\nPETR4\nEmpresa não detalhada\nR$ 20,00\nMercado\nBRASIL\nMoeda\nBRL\nReferência\n07/09/2026, 02:40:13 · fuso não fornecido\nOrigem\nOrigem não informada\nTipo de fonte\nIndisponível\nColeta\nIndisponível\n\nColeta e freshness indisponíveis no contrato legado.\n\nAtualizar cotação\nAAPL\nEmpresa não detalhada\nUS$ 100,00\nMercado\nAMERICANO\nMoeda\nUSD\nReferência\n07/09/2026, 02:40:13 · fuso não fornecido\nOrigem\nOrigem não informada\nTipo de fonte\nIndisponível\nColeta\nIndisponível\n\nColeta e freshness indisponíveis no contrato legado.\n\nAtualizar cotação\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Ações",
+      "H2:Cadastrar ativo",
+      "H2:Ativos monitorados"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 390,
+      "height": 2161.1875,
+      "top": 69,
+      "right": 390,
+      "bottom": 2230.1875,
+      "left": 0
+    },
+    "controls": 15
+  },
+  {
+    "id": "measure-corretoras-390",
+    "name": "Corretoras | Atlas Carteira",
+    "path": "/corretoras",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scrollWidth": 390,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nCorretoras\n\nINSTITUIÇÕES DA SIMULAÇÃO\n\nCorretoras\n\nDados empresariais e evidência regulatória são apresentados separadamente, sem inferências por CNAE.\n\nAtualizar evidências\nAtualizar lista\nCadastrar corretora\n\nO cadastro serve à simulação. Situação empresarial ativa não comprova autorização regulatória.\n\nCNPJ\n14 dígitos; pontuação é opcional.\nCEP\nCadastrar corretora\nCorretoras cadastradas\n\nSomente dados presentes no contrato são exibidos.\n\nCorretora Teste\n11.222.333/0001-81\n•\nNão consultada\nLocalidade\nSão Paulo /SP\nSituação empresarial\nATIVA\nFonte empresarial\nBRASIL_API\nCategoria regulatória\nNão informada\nFonte regulatória\nOrigem não informada\nReferência\nIndisponível\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Corretoras",
+      "H2:Cadastrar corretora",
+      "H2:Corretoras cadastradas"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 390,
+      "height": 1373.1875,
+      "top": 69,
+      "right": 390,
+      "bottom": 1442.1875,
+      "left": 0
+    },
+    "controls": 13
+  },
+  {
+    "id": "measure-dashboard-320",
+    "name": "Dashboard | Atlas Carteira",
+    "path": "/dashboard",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scrollWidth": 320,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nDashboard\n\nRESUMO DA CARTEIRA\n\nDashboard\n\nAcompanhe sua carteira simulada com valores e fontes calculados pelo backend.\n\nAtualizar dados\nRegistrar operação simulada\nPatrimônio estimado\n✓\nDisponível\n\nR$ 1.775,00\n\nConsolidado em BRL\n\nCusto das posições\n✓\nDisponível\n\nR$ 1.775,00\n\nCalculado pelo backend\n\nResultado não realizado\n✓\nDisponível\n\nR$ 0,00\n\nValor absoluto confirmado\n\nPosições ativas\n✓\nDisponível\n\n2\n\nPosições ativo–corretora\nPrincipais posições\n\nValores nativos, sem somas calculadas no navegador.\n\nVer carteira\nAAPL\nCorretora Teste · USD\nUS$ 300,00\nQuantidade\n3\nPreço médio\nUS$ 100,00\nCotação\nUS$ 100,00\nResultado\nUS$ 0,00\nPETR4\nCorretora Teste · BRL\nR$ 200,00\nQuantidade\n10\nPreço médio\nR$ 20,00\nCotação\nR$ 20,00\nResultado\nR$ 0,00\nMovimentações recentes\n\nHistórico persistido pelo backend.\n\nVer todas\n↑\nVenda simulada · PETR4\n07/09/2026, 02:40:14 BRT · Corretora Teste\n2 × R$ 20,00\n↓\nCompra simulada · AAPL\n07/09/2026, 02:40:14 BRT · Corretora Teste\n3 × US$ 100,00\n↓\nCompra simulada · PETR4\n07/09/2026, 02:40:13 BRT · Corretora Teste\n12 × R$ 20,00\nQualidade dos dados\n\nFonte, referência, coleta e atualidade.\n\nTWELVE_DATA\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nBRAPI\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nCâmbio USD/BRL\n✓\nDisponível\n\nBANCO_CENTRAL_DO_BRASIL_PTAX · BCB_PTAX_CLOSING_REFERENCE\n\nReferência\n06/09/2026, 13:00:00 BRT\nColeta\n06/09/2026, 23:40:14 BRT\n\nLeitura consolidada em 06/09/2026, 23:56:09 BRT.\n\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Dashboard",
+      "H2:Patrimônio estimado",
+      "H2:Custo das posições",
+      "H2:Resultado não realizado",
+      "H2:Posições ativas",
+      "H2:Principais posições",
+      "H2:Movimentações recentes",
+      "H2:Qualidade dos dados"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 320,
+      "height": 3349.140625,
+      "top": 69,
+      "right": 320,
+      "bottom": 3418.140625,
+      "left": 0
+    },
+    "controls": 12
+  },
+  {
+    "id": "measure-carteira-320",
+    "name": "Carteira | Atlas Carteira",
+    "path": "/carteira",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scrollWidth": 320,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nCarteira\n\nPOSIÇÕES DETALHADAS\n\nCarteira\n\nCada linha representa um ativo em uma corretora. Valores financeiros são recebidos prontos do backend.\n\nAtualizar posições\nLocalizar posições\n\nMercado e corretora filtram no servidor. Busca e ordenação atuam na página atual.\n\nBuscar ativo ou corretora\nMercado\nTodos\nBrasil\nAmericano\nCorretora\nTodas\nCorretora Teste\nOrdenar página por\nAtivo\nCorretora\nMaior quantidade\nAplicar\nLimpar\n\n2 posição(ões) no resultado do servidor. Exibindo 2 nesta página.\n\nAAPL\nAMERICANO · Corretora Teste\n✓\nDisponível\nQuantidade\n3\nMoeda\nUSD\nPreço médio\nUS$ 100,00\nCotação\nUS$ 100,00\nValor atual\nUS$ 300,00\nResultado\nUS$ 0,00\nOrigem da cotação\nPETR4\nBRASIL · Corretora Teste\n✓\nDisponível\nQuantidade\n10\nMoeda\nBRL\nPreço médio\nR$ 20,00\nCotação\nR$ 20,00\nValor atual\nR$ 200,00\nResultado\nR$ 0,00\nOrigem da cotação\nAnterior\nPágina 1 de 1\nPróxima\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Carteira",
+      "H2:Localizar posições"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 320,
+      "height": 2518.1875,
+      "top": 69,
+      "right": 320,
+      "bottom": 2587.1875,
+      "left": 0
+    },
+    "controls": 17
+  },
+  {
+    "id": "measure-operacoes-320",
+    "name": "Operações | Atlas Carteira",
+    "path": "/operacoes",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scrollWidth": 320,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nOperações\n\nREGISTROS SIMULADOS\n\nOperações\n\nRegistre compras e vendas acadêmicas. Nenhuma ordem é enviada ao mercado.\n\nReconciliar leituras\nNova operação simulada\n\nO backend consulta o preço aplicável; não existe preço garantido, execução, liquidação ou custódia real.\n\nTipo de registro\nCompra simulada\nVenda simulada\nAtivo\nSelecione\nPETR4 · BRASIL\nAAPL · AMERICANO\nMercado do ativo\nCorretora\nSelecione\nCorretora Teste\nQuantidade inteira\nEntre 1 e 2.147.483.647.\nRevisar compra simulada\nMovimentações\n\nHistórico paginado em ordem confirmada pelo backend.\n\nAtualizar histórico\nTipo\nTodos\nCompra\nVenda\nTicker\nCorretora\nTodas\nCorretora Teste\nDesde\nAté\nFiltrar\nLimpar\nPETR4\nCorretora Teste\n•\nVenda simulada\nQuantidade\n2\nMercado\nBRASIL\nPreço nativo\nR$ 20,00\nData\n07/09/2026, 02:40:14 BRT\nOrigem histórica\nOrigem não informada\nAAPL\nCorretora Teste\n•\nCompra simulada\nQuantidade\n3\nMercado\nAMERICANO\nPreço nativo\nUS$ 100,00\nData\n07/09/2026, 02:40:14 BRT\nOrigem histórica\nOrigem não informada\nPETR4\nCorretora Teste\n•\nCompra simulada\nQuantidade\n12\nMercado\nBRASIL\nPreço nativo\nR$ 20,00\nData\n07/09/2026, 02:40:13 BRT\nOrigem histórica\nOrigem não informada\nAnterior\nPágina 1 de 1\nPróxima\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Operações",
+      "H2:Nova operação simulada",
+      "H2:Movimentações"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 320,
+      "height": 3541.171875,
+      "top": 69,
+      "right": 320,
+      "bottom": 3610.171875,
+      "left": 0
+    },
+    "controls": 26
+  },
+  {
+    "id": "measure-acoes-320",
+    "name": "Ações | Atlas Carteira",
+    "path": "/acoes",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scrollWidth": 320,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nAções\n\nCATÁLOGO DE ATIVOS\n\nAções\n\nCadastre ativos para a simulação e atualize suas cotações com feedback rastreável.\n\nAtualizar lista\nCadastrar ativo\n\nUse o ticker canônico do mercado selecionado. O preço nunca é informado manualmente.\n\nTicker\nEx.: PETR4 ou AAPL\nMercado\nBrasil (B3)\nAmericano\nCadastrar ativo\nAtivos monitorados\n\nCotações legadas sem proveniência aparecem como origem não informada.\n\nBuscar\nPETR4\nEmpresa não detalhada\nR$ 20,00\nMercado\nBRASIL\nMoeda\nBRL\nReferência\n07/09/2026, 02:40:13 · fuso não fornecido\nOrigem\nOrigem não informada\nTipo de fonte\nIndisponível\nColeta\nIndisponível\n\nColeta e freshness indisponíveis no contrato legado.\n\nAtualizar cotação\nAAPL\nEmpresa não detalhada\nUS$ 100,00\nMercado\nAMERICANO\nMoeda\nUSD\nReferência\n07/09/2026, 02:40:13 · fuso não fornecido\nOrigem\nOrigem não informada\nTipo de fonte\nIndisponível\nColeta\nIndisponível\n\nColeta e freshness indisponíveis no contrato legado.\n\nAtualizar cotação\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Ações",
+      "H2:Cadastrar ativo",
+      "H2:Ativos monitorados"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 320,
+      "height": 2326.1875,
+      "top": 69,
+      "right": 320,
+      "bottom": 2395.1875,
+      "left": 0
+    },
+    "controls": 15
+  },
+  {
+    "id": "measure-corretoras-320",
+    "name": "Corretoras | Atlas Carteira",
+    "path": "/corretoras",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scrollWidth": 320,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nCorretoras\n\nINSTITUIÇÕES DA SIMULAÇÃO\n\nCorretoras\n\nDados empresariais e evidência regulatória são apresentados separadamente, sem inferências por CNAE.\n\nAtualizar evidências\nAtualizar lista\nCadastrar corretora\n\nO cadastro serve à simulação. Situação empresarial ativa não comprova autorização regulatória.\n\nCNPJ\n14 dígitos; pontuação é opcional.\nCEP\nCadastrar corretora\nCorretoras cadastradas\n\nSomente dados presentes no contrato são exibidos.\n\nCorretora Teste\n11.222.333/0001-81\n•\nNão consultada\nLocalidade\nSão Paulo /SP\nSituação empresarial\nATIVA\nFonte empresarial\nBRASIL_API\nCategoria regulatória\nNão informada\nFonte regulatória\nOrigem não informada\nReferência\nIndisponível\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Corretoras",
+      "H2:Cadastrar corretora",
+      "H2:Corretoras cadastradas"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 320,
+      "height": 1531.1875,
+      "top": 69,
+      "right": 320,
+      "bottom": 1600.1875,
+      "left": 0
+    },
+    "controls": 13
+  },
+  {
+    "id": "dashboard-loading",
+    "name": "Dashboard | Atlas Carteira",
+    "path": "/dashboard",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scrollWidth": 390,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nDashboard\n\nRESUMO DA CARTEIRA\n\nDashboard\n\nAcompanhe sua carteira simulada com valores e fontes calculados pelo backend.\n\nAtualizar dados\nRegistrar operação simulada\nCarregando dashboard da carteira\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Dashboard"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 390,
+      "height": 684,
+      "top": 69,
+      "right": 390,
+      "bottom": 753,
+      "left": 0
+    },
+    "controls": 10
+  },
+  {
+    "id": "dashboard-error",
+    "name": "Dashboard | Atlas Carteira",
+    "path": "/dashboard",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scrollWidth": 390,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nDashboard\n\nRESUMO DA CARTEIRA\n\nDashboard\n\nAcompanhe sua carteira simulada com valores e fontes calculados pelo backend.\n\nAtualizar dados\nRegistrar operação simulada\nNão foi possível carregar os dados\n\nIndisponibilidade simulada para auditoria visual.\n\nTentar leitura novamente\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Dashboard"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 390,
+      "height": 684,
+      "top": 69,
+      "right": 390,
+      "bottom": 753,
+      "left": 0
+    },
+    "controls": 11
+  },
+  {
+    "id": "dashboard-partial",
+    "name": "Dashboard | Atlas Carteira",
+    "path": "/dashboard",
+    "viewport": {
+      "width": 1440,
+      "height": 1024
+    },
+    "scrollWidth": 1440,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nAC\nAtlas Carteira\nAcompanhamento acadêmico\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações\n\nSistema acadêmico. Não executa ordens nem constitui recomendação de investimento.\n\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nDashboard\n\nRESUMO DA CARTEIRA\n\nDashboard\n\nAcompanhe sua carteira simulada com valores e fontes calculados pelo backend.\n\nAtualizar dados\nRegistrar operação simulada\nPatrimônio estimado\n✓\nDisponível\n\nR$ 1.775,00\n\nConsolidado em BRL\n\nCusto das posições\n✓\nDisponível\n\nR$ 1.775,00\n\nCalculado pelo backend\n\nResultado não realizado\n✓\nDisponível\n\nR$ 0,00\n\nValor absoluto confirmado\n\nPosições ativas\n✓\nDisponível\n\n2\n\nPosições ativo–corretora\nPrincipais posições\n\nValores nativos, sem somas calculadas no navegador.\n\nVer carteira\nATIVO\tCORRETORA\tQUANTIDADE\tPREÇO MÉDIO\tCOTAÇÃO\tVALOR ATUAL\tRESULTADO\nAAPL\nAMERICANO · USD\n\tCorretora Teste\t3\tUS$ 100,00\tUS$ 100,00\tUS$ 300,00\tUS$ 0,00\nPETR4\nBRASIL · BRL\n\tCorretora Teste\t10\tR$ 20,00\tR$ 20,00\tR$ 200,00\tR$ 0,00\nMovimentações recentes\n\nHistórico persistido pelo backend.\n\nVer todas\n↑\nVenda simulada · PETR4\n07/09/2026, 02:40:14 BRT · Corretora Teste\n2 × R$ 20,00\n↓\nCompra simulada · AAPL\n07/09/2026, 02:40:14 BRT · Corretora Teste\n3 × US$ 100,00\n↓\nCompra simulada · PETR4\n07/09/2026, 02:40:13 BRT · Corretora Teste\n12 × R$ 20,00\nQualidade dos dados\n\nFonte, referência, coleta e atualidade.\n\nTWELVE_DATA\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nBRAPI\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nCâmbio USD/BRL\n✓\nDisponível\n\nBANCO_CENTRAL_DO_BRASIL_PTAX · BCB_PTAX_CLOSING_REFERENCE\n\nReferência\n06/09/2026, 13:00:00 BRT\nColeta\n06/09/2026, 23:40:14 BRT\n\nLeitura consolidada em 06/09/2026, 23:56:13 BRT.\n\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.",
+    "headings": [
+      "H1:Dashboard",
+      "H2:Patrimônio estimado",
+      "H2:Custo das posições",
+      "H2:Resultado não realizado",
+      "H2:Posições ativas",
+      "H2:Principais posições",
+      "H2:Movimentações recentes",
+      "H2:Qualidade dos dados"
+    ],
+    "mainRect": {
+      "x": 248,
+      "y": 72,
+      "width": 1192,
+      "height": 1365.390625,
+      "top": 72,
+      "right": 1440,
+      "bottom": 1437.390625,
+      "left": 248
+    },
+    "controls": 13
+  },
+  {
+    "id": "dashboard-stale",
+    "name": "Dashboard | Atlas Carteira",
+    "path": "/dashboard",
+    "viewport": {
+      "width": 1440,
+      "height": 1024
+    },
+    "scrollWidth": 1440,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nAC\nAtlas Carteira\nAcompanhamento acadêmico\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações\n\nSistema acadêmico. Não executa ordens nem constitui recomendação de investimento.\n\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nDashboard\n\nRESUMO DA CARTEIRA\n\nDashboard\n\nAcompanhe sua carteira simulada com valores e fontes calculados pelo backend.\n\nAtualizar dados\nRegistrar operação simulada\nPatrimônio estimado\n✓\nDisponível\n\nR$ 1.775,00\n\nConsolidado em BRL\n\nCusto das posições\n✓\nDisponível\n\nR$ 1.775,00\n\nCalculado pelo backend\n\nResultado não realizado\n✓\nDisponível\n\nR$ 0,00\n\nValor absoluto confirmado\n\nPosições ativas\n✓\nDisponível\n\n2\n\nPosições ativo–corretora\nPrincipais posições\n\nValores nativos, sem somas calculadas no navegador.\n\nVer carteira\nATIVO\tCORRETORA\tQUANTIDADE\tPREÇO MÉDIO\tCOTAÇÃO\tVALOR ATUAL\tRESULTADO\nAAPL\nAMERICANO · USD\n\tCorretora Teste\t3\tUS$ 100,00\tUS$ 100,00\tUS$ 300,00\tUS$ 0,00\nPETR4\nBRASIL · BRL\n\tCorretora Teste\t10\tR$ 20,00\tR$ 20,00\tR$ 200,00\tR$ 0,00\nMovimentações recentes\n\nHistórico persistido pelo backend.\n\nVer todas\n↑\nVenda simulada · PETR4\n07/09/2026, 02:40:14 BRT · Corretora Teste\n2 × R$ 20,00\n↓\nCompra simulada · AAPL\n07/09/2026, 02:40:14 BRT · Corretora Teste\n3 × US$ 100,00\n↓\nCompra simulada · PETR4\n07/09/2026, 02:40:13 BRT · Corretora Teste\n12 × R$ 20,00\nQualidade dos dados\n\nFonte, referência, coleta e atualidade.\n\nTWELVE_DATA\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nBRAPI\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nCâmbio USD/BRL\n✓\nDisponível\n\nBANCO_CENTRAL_DO_BRASIL_PTAX · BCB_PTAX_CLOSING_REFERENCE\n\nReferência\n06/09/2026, 13:00:00 BRT\nColeta\n06/09/2026, 23:40:14 BRT\n\nLeitura consolidada em 06/09/2026, 23:56:13 BRT.\n\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.",
+    "headings": [
+      "H1:Dashboard",
+      "H2:Patrimônio estimado",
+      "H2:Custo das posições",
+      "H2:Resultado não realizado",
+      "H2:Posições ativas",
+      "H2:Principais posições",
+      "H2:Movimentações recentes",
+      "H2:Qualidade dos dados"
+    ],
+    "mainRect": {
+      "x": 248,
+      "y": 72,
+      "width": 1192,
+      "height": 1365.390625,
+      "top": 72,
+      "right": 1440,
+      "bottom": 1437.390625,
+      "left": 248
+    },
+    "controls": 13
+  },
+  {
+    "id": "dashboard-integration-unavailable",
+    "name": "Dashboard | Atlas Carteira",
+    "path": "/dashboard",
+    "viewport": {
+      "width": 1440,
+      "height": 1024
+    },
+    "scrollWidth": 1440,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nAC\nAtlas Carteira\nAcompanhamento acadêmico\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações\n\nSistema acadêmico. Não executa ordens nem constitui recomendação de investimento.\n\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\nAtlas Carteira\n›\nDashboard\n\nRESUMO DA CARTEIRA\n\nDashboard\n\nAcompanhe sua carteira simulada com valores e fontes calculados pelo backend.\n\nAtualizar dados\nRegistrar operação simulada\nPatrimônio estimado\n✓\nDisponível\n\nR$ 1.775,00\n\nConsolidado em BRL\n\nCusto das posições\n✓\nDisponível\n\nR$ 1.775,00\n\nCalculado pelo backend\n\nResultado não realizado\n✓\nDisponível\n\nR$ 0,00\n\nValor absoluto confirmado\n\nPosições ativas\n✓\nDisponível\n\n2\n\nPosições ativo–corretora\nPrincipais posições\n\nValores nativos, sem somas calculadas no navegador.\n\nVer carteira\nATIVO\tCORRETORA\tQUANTIDADE\tPREÇO MÉDIO\tCOTAÇÃO\tVALOR ATUAL\tRESULTADO\nAAPL\nAMERICANO · USD\n\tCorretora Teste\t3\tUS$ 100,00\tUS$ 100,00\tUS$ 300,00\tUS$ 0,00\nPETR4\nBRASIL · BRL\n\tCorretora Teste\t10\tR$ 20,00\tR$ 20,00\tR$ 200,00\tR$ 0,00\nMovimentações recentes\n\nHistórico persistido pelo backend.\n\nVer todas\n↑\nVenda simulada · PETR4\n07/09/2026, 02:40:14 BRT · Corretora Teste\n2 × R$ 20,00\n↓\nCompra simulada · AAPL\n07/09/2026, 02:40:14 BRT · Corretora Teste\n3 × US$ 100,00\n↓\nCompra simulada · PETR4\n07/09/2026, 02:40:13 BRT · Corretora Teste\n12 × R$ 20,00\nQualidade dos dados\n\nFonte, referência, coleta e atualidade.\n\nTWELVE_DATA\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nBRAPI\n✓\nDisponível\nReferência\n06/09/2026, 23:40:13 BRT\nColeta\n06/09/2026, 23:40:13 BRT\nCâmbio USD/BRL\n✓\nDisponível\n\nBANCO_CENTRAL_DO_BRASIL_PTAX · BCB_PTAX_CLOSING_REFERENCE\n\nReferência\n06/09/2026, 13:00:00 BRT\nColeta\n06/09/2026, 23:40:14 BRT\n\nLeitura consolidada em 06/09/2026, 23:56:14 BRT.\n\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.",
+    "headings": [
+      "H1:Dashboard",
+      "H2:Patrimônio estimado",
+      "H2:Custo das posições",
+      "H2:Resultado não realizado",
+      "H2:Posições ativas",
+      "H2:Principais posições",
+      "H2:Movimentações recentes",
+      "H2:Qualidade dos dados"
+    ],
+    "mainRect": {
+      "x": 248,
+      "y": 72,
+      "width": 1192,
+      "height": 1365.390625,
+      "top": 72,
+      "right": 1440,
+      "bottom": 1437.390625,
+      "left": 248
+    },
+    "controls": 13
+  },
+  {
+    "id": "session-expired",
+    "name": "Acesso | Atlas Carteira",
+    "path": "/login",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scrollWidth": 390,
+    "overflowX": false,
+    "text": "Pular para o formulário de acesso\nAC\nAtlas Carteira\nLaboratório financeiro\nCONTROLE COM CONTEXTO\nSua carteira simulada, organizada com clareza.\n\nUma experiência acadêmica para registrar operações, acompanhar posições e entender os dados disponíveis — sem executar ordens no mercado.\n\nACESSO ADMINISTRATIVO PROTEGIDO\nAcesse o Atlas\n\nUse a credencial administrativa configurada para este ambiente.\n\nSessão encerrada\nSua sessão expirou. Entre novamente para continuar.\nUsuário\nSenha\nMostrar\nA mensagem de erro não confirma se o usuário existe.\nEntrar com segurança\nA sessão usa cookie HttpOnly. A senha e os dados de autenticação não são armazenados no navegador.\nFinalidade acadêmica\nO Atlas Carteira não executa ordens e não constitui recomendação de investimento.\n\nSem cadastro público, recuperação por e-mail ou login social nesta fase.",
+    "headings": [
+      "H1:Sua carteira simulada, organizada com clareza.",
+      "H2:Acesse o Atlas"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 929.984375,
+      "top": 0,
+      "right": 390,
+      "bottom": 929.984375,
+      "left": 0
+    },
+    "controls": 5
+  },
+  {
+    "id": "404",
+    "name": "Página não encontrada | Atlas Carteira",
+    "path": "/rota-inexistente",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "scrollWidth": 320,
+    "overflowX": false,
+    "text": "Pular para o conteúdo\nÁrea protegida\nAtlas Carteira\nConta de demonstração\nSair\n\n404\n\nPágina não encontrada\n\nO endereço informado não corresponde a uma área do Atlas Carteira.\n\nVoltar ao Dashboard\nSistema acadêmico. Os registros são simulados; nenhuma ordem é enviada ao mercado e o conteúdo não constitui recomendação de investimento.\nD\nDashboard\nC\nCarteira\nA\nAções\nR\nCorretoras\nO\nOperações",
+    "headings": [
+      "H1:Página não encontrada"
+    ],
+    "mainRect": {
+      "x": 0,
+      "y": 69,
+      "width": 320,
+      "height": 410.59375,
+      "top": 69,
+      "right": 320,
+      "bottom": 479.59375,
+      "left": 0
+    },
+    "controls": 8
+  }
+]
