@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atlas Carteira — Protótipo demonstrativo</title>
+  <style>
+    :root {
+      --navy: #0b1f3a;
+      --navy-2: #102b50;
+      --blue: #185adb;
+      --blue-soft: #eaf1ff;
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --text: #172033;
+      --muted: #5d6b82;
+      --border: #d8e0ec;
+      --positive: #137a4a;
+      --positive-soft: #e8f6ef;
+      --negative: #b4232c;
+      --negative-soft: #fff0f1;
+      --warning: #8a5b00;
+      --shadow: 0 10px 30px rgba(11,31,58,.07);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    body { display: flex; }
+    button, input, select { font: inherit; }
+    button { cursor: pointer; }
+    .skip { position: fixed; left: 12px; top: -80px; background: white; color: var(--navy); padding: 10px 14px; z-index: 20; border-radius: 8px; }
+    .skip:focus { top: 12px; }
+    .sidebar { position: fixed; inset: 0 auto 0 0; width: 248px; background: var(--navy); color: white; padding: 28px 20px; display: flex; flex-direction: column; z-index: 5; }
+    .brand { display: flex; align-items: center; gap: 12px; padding: 0 8px 28px; border-bottom: 1px solid rgba(255,255,255,.12); }
+    .brand-mark { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 12px; background: linear-gradient(145deg, #2f7df5, #6ba3ff); font-weight: 900; letter-spacing: -.05em; box-shadow: inset 0 0 0 1px rgba(255,255,255,.25); }
+    .brand strong { display: block; font-size: 15px; letter-spacing: .01em; }
+    .brand span { display: block; color: #afbed2; font-size: 11px; margin-top: 2px; }
+    .nav-label { margin: 26px 10px 10px; color: #8fa3bf; font-size: 10px; text-transform: uppercase; letter-spacing: .12em; font-weight: 800; }
+    .nav { display: grid; gap: 6px; }
+    .nav a { color: #c8d4e4; text-decoration: none; display: flex; gap: 12px; align-items: center; padding: 12px 14px; border-radius: 10px; font-size: 14px; font-weight: 650; }
+    .nav a.active { background: rgba(77,139,245,.18); color: white; box-shadow: inset 3px 0 #64a0ff; }
+    .nav svg { width: 19px; height: 19px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+    .sidebar-foot { margin-top: auto; padding: 16px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.10); border-radius: 12px; }
+    .sidebar-foot .eyebrow { color: #9db2cd; }
+    .sidebar-foot strong { display: block; font-size: 12px; margin: 6px 0; }
+    .sidebar-foot p { margin: 0; color: #b7c6da; font-size: 11px; line-height: 1.45; }
+    .app { margin-left: 248px; width: calc(100% - 248px); min-height: 100vh; }
+    .topbar { height: 68px; padding: 0 36px; border-bottom: 1px solid var(--border); background: rgba(255,255,255,.92); backdrop-filter: blur(14px); display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 4; }
+    .crumb { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+    .crumb strong { color: var(--text); }
+    .top-actions { display: flex; align-items: center; gap: 10px; }
+    .status-pill { border: 1px solid #b8e0ca; background: var(--positive-soft); color: #0d633a; border-radius: 999px; padding: 7px 11px; font-size: 11px; font-weight: 750; display: flex; align-items: center; gap: 7px; }
+    .status-pill i { width: 7px; height: 7px; border-radius: 50%; background: #159155; }
+    .icon-button { width: 36px; height: 36px; border-radius: 10px; border: 1px solid var(--border); background: white; display: grid; place-items: center; color: var(--navy); }
+    main { max-width: 1440px; padding: 30px 36px 38px; margin: 0 auto; }
+    .demo-banner { margin-bottom: 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 11px 14px; border-radius: 10px; border: 1px solid #f0d493; background: #fff9e9; color: #6e4b05; font-size: 12px; }
+    .demo-banner strong { font-weight: 800; }
+    .demo-banner span:last-child { color: #8b681d; }
+    .page-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 24px; }
+    .eyebrow { text-transform: uppercase; color: var(--blue); font-size: 10px; font-weight: 850; letter-spacing: .14em; }
+    h1 { font-size: 28px; line-height: 1.15; margin: 7px 0 7px; letter-spacing: -.035em; }
+    .subtitle { margin: 0; color: var(--muted); font-size: 13px; }
+    .primary { border: 0; background: var(--blue); color: white; border-radius: 10px; padding: 11px 16px; font-size: 12px; font-weight: 750; box-shadow: 0 6px 16px rgba(24,90,219,.22); display: flex; align-items: center; gap: 8px; }
+    .cards { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px; margin-bottom: 20px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow); }
+    .summary { padding: 18px 18px 16px; min-height: 128px; position: relative; overflow: hidden; }
+    .summary::after { content: ""; position: absolute; width: 80px; height: 80px; right: -28px; top: -30px; border-radius: 50%; background: var(--blue-soft); }
+    .summary-label { font-size: 11px; color: var(--muted); font-weight: 700; display: flex; align-items: center; gap: 7px; }
+    .summary-label i { width: 8px; height: 8px; border-radius: 3px; background: #89a0bd; }
+    .summary-value { font-size: 23px; font-weight: 820; letter-spacing: -.04em; margin: 16px 0 7px; white-space: nowrap; }
+    .summary-meta { font-size: 10px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+    .gain { color: var(--positive); font-weight: 800; }
+    .loss { color: var(--negative); font-weight: 800; }
+    .main-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 20px; }
+    .panel-head { padding: 19px 20px 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .panel-head h2 { margin: 0; font-size: 15px; letter-spacing: -.015em; }
+    .panel-head p { margin: 4px 0 0; color: var(--muted); font-size: 10px; }
+    .link { color: var(--blue); font-size: 11px; font-weight: 750; text-decoration: none; }
+    table { width: 100%; border-collapse: collapse; }
+    th { padding: 10px 16px; color: var(--muted); background: #f8fafd; border-top: 1px solid #e5ebf3; border-bottom: 1px solid #e5ebf3; font-size: 9px; text-transform: uppercase; letter-spacing: .07em; text-align: left; }
+    td { padding: 14px 16px; border-bottom: 1px solid #edf1f6; font-size: 11px; vertical-align: middle; }
+    tr:last-child td { border-bottom: 0; }
+    .asset { display: flex; align-items: center; gap: 10px; }
+    .asset-mark { width: 31px; height: 31px; border-radius: 9px; background: var(--navy); color: white; display: grid; place-items: center; font-size: 9px; font-weight: 850; }
+    .asset strong { display: block; font-size: 11px; }
+    .asset small, td small { color: var(--muted); font-size: 9px; }
+    .right { text-align: right; }
+    .source { display: inline-flex; align-items: center; gap: 5px; margin-top: 3px; color: var(--muted); font-size: 8px; }
+    .source::before { content:""; width: 5px; height: 5px; background: #16a064; border-radius: 50%; }
+    .operation { padding-bottom: 18px; }
+    .tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin: 0 18px 16px; padding: 4px; background: #eef2f7; border-radius: 10px; }
+    .tabs button { border: 0; border-radius: 8px; background: transparent; padding: 8px; color: var(--muted); font-size: 10px; font-weight: 800; }
+    .tabs button.active { background: white; color: var(--navy); box-shadow: 0 2px 6px rgba(11,31,58,.08); }
+    .form { padding: 0 18px; display: grid; gap: 12px; }
+    label { font-size: 9px; font-weight: 800; color: #46546a; text-transform: uppercase; letter-spacing: .05em; }
+    .field { display: grid; gap: 6px; }
+    .control { width: 100%; border: 1px solid #cfd8e5; border-radius: 9px; background: white; color: var(--text); padding: 10px 11px; font-size: 11px; outline: 0; }
+    .control:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(24,90,219,.13); }
+    .hint { color: var(--muted); font-size: 9px; line-height: 1.4; }
+    .review { background: #f6f8fb; border: 1px solid #e1e7f0; border-radius: 10px; padding: 10px 11px; display: flex; justify-content: space-between; font-size: 10px; }
+    .review span { color: var(--muted); }
+    .review strong { color: var(--navy); }
+    .submit { border: 0; color: white; background: var(--blue); border-radius: 9px; padding: 11px; font-size: 11px; font-weight: 800; }
+    .lower-grid { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(300px,.75fr); gap: 20px; }
+    .movement-list { padding: 0 20px 8px; }
+    .movement { display: grid; grid-template-columns: 28px minmax(0,1fr) auto; gap: 11px; align-items: center; padding: 12px 0; border-top: 1px solid #edf1f6; }
+    .movement:first-child { border-top: 0; }
+    .move-icon { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; background: var(--positive-soft); color: var(--positive); font-size: 13px; font-weight: 900; }
+    .move-icon.sell { background: var(--negative-soft); color: var(--negative); }
+    .movement strong { display: block; font-size: 10px; }
+    .movement small { color: var(--muted); font-size: 9px; }
+    .movement-value { text-align: right; font-size: 10px; font-weight: 750; }
+    .movement-value small { display: block; font-weight: 500; }
+    .data-panel { padding-bottom: 16px; }
+    .data-row { margin: 0 18px; padding: 12px 0; border-top: 1px solid #edf1f6; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .data-row:first-of-type { border-top: 0; }
+    .data-row strong { font-size: 10px; display: block; }
+    .data-row small { font-size: 8px; color: var(--muted); line-height: 1.45; display: block; margin-top: 3px; }
+    .tag { padding: 5px 7px; border-radius: 6px; background: var(--positive-soft); color: var(--positive); font-size: 8px; font-weight: 800; white-space: nowrap; }
+    .tag.reference { background: #fff6df; color: var(--warning); }
+    .mobile-cards, .mobile-header, .bottom-nav { display: none; }
+    .academic { margin-top: 20px; color: var(--muted); font-size: 9px; text-align: center; line-height: 1.5; }
+    @media (max-width: 1100px) {
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .main-grid, .lower-grid { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 701px) and (max-width: 900px) {
+      .sidebar { width: 84px; padding: 24px 12px; align-items: stretch; }
+      .brand { padding: 0 10px 24px; justify-content: center; }
+      .brand > div:last-child, .nav-label, .nav a:not(.active)::after, .sidebar-foot { display: none; }
+      .nav a { justify-content: center; padding: 13px; font-size: 0; gap: 0; }
+      .nav a svg { width: 21px; height: 21px; }
+      .app { margin-left: 84px; width: calc(100% - 84px); }
+      .topbar { padding: 0 24px; }
+      main { padding: 26px 24px 34px; }
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .lower-grid { grid-template-columns: 1fr; }
+      th, td { padding-left: 11px; padding-right: 11px; }
+      .positions th:nth-child(2), .positions td:nth-child(2) { display: none; }
+    }
+    @media (max-width: 700px) {
+      body { display: block; padding-bottom: calc(78px + env(safe-area-inset-bottom)); }
+      .sidebar, .topbar { display: none; }
+      .app { margin: 0; width: 100%; }
+      .mobile-header { height: 58px; display: flex; align-items: center; justify-content: space-between; padding: 0 17px; background: var(--navy); color: white; position: sticky; top: 0; z-index: 5; }
+      .mobile-brand { display: flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 800; }
+      .mobile-brand .brand-mark { width: 30px; height: 30px; border-radius: 9px; font-size: 11px; }
+      .mobile-header .icon-button { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.14); color: white; width: 33px; height: 33px; }
+      main { padding: 18px 16px 22px; }
+      .demo-banner { display: block; font-size: 10px; line-height: 1.45; margin-bottom: 17px; }
+      .demo-banner span:last-child { display: block; margin-top: 3px; }
+      .page-head { align-items: flex-start; margin-bottom: 18px; }
+      .page-head .primary { width: 36px; height: 36px; padding: 0; display: grid; place-items: center; font-size: 20px; }
+      .page-head .primary span { display: none; }
+      h1 { font-size: 23px; margin-top: 5px; }
+      .subtitle { font-size: 11px; line-height: 1.4; }
+      .cards { grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+      .summary { padding: 14px 13px; min-height: 105px; border-radius: 13px; }
+      .summary-label { font-size: 9px; }
+      .summary-value { font-size: 16px; margin: 13px 0 7px; }
+      .summary-meta { font-size: 8px; }
+      .main-grid, .lower-grid { gap: 14px; margin-bottom: 14px; }
+      .panel-head { padding: 16px 15px 12px; }
+      .panel-head h2 { font-size: 13px; }
+      .desktop-table { display: none; }
+      .mobile-cards { display: grid; padding: 0 14px 10px; }
+      .position-card { border-top: 1px solid #edf1f6; padding: 13px 0; }
+      .position-card:first-child { border-top: 0; }
+      .position-top { display: flex; justify-content: space-between; gap: 10px; }
+      .position-top .asset-mark { width: 30px; height: 30px; }
+      .position-top .asset { align-items: flex-start; }
+      .position-total { text-align: right; font-size: 11px; font-weight: 800; }
+      .position-total small { display: block; color: var(--positive); font-size: 8px; margin-top: 3px; }
+      .position-details { display: grid; grid-template-columns: repeat(3,1fr); gap: 7px; background: #f7f9fc; border-radius: 9px; margin-top: 10px; padding: 9px; }
+      .position-details span { color: var(--muted); font-size: 7px; text-transform: uppercase; display: block; margin-bottom: 3px; }
+      .position-details strong { font-size: 9px; }
+      .operation { display: none; }
+      .movement-list { padding: 0 15px 7px; }
+      .data-panel { display: none; }
+      .academic { margin: 15px 6px 2px; font-size: 8px; }
+      .bottom-nav { position: fixed; display: grid; grid-template-columns: repeat(5,1fr); inset: auto 0 0; height: calc(64px + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom); background: white; border-top: 1px solid var(--border); z-index: 10; box-shadow: 0 -8px 24px rgba(11,31,58,.08); }
+      .bottom-nav a { text-decoration: none; color: #718096; font-size: 8px; font-weight: 700; display: grid; justify-items: center; align-content: center; gap: 4px; }
+      .bottom-nav a.active { color: var(--blue); }
+      .bottom-nav svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <aside class="sidebar" aria-label="Navegação principal">
+    <div class="brand"><div class="brand-mark">AC</div><div><strong>Atlas Carteira</strong><span>Laboratório financeiro</span></div></div>
+    <div class="nav-label">Visão geral</div>
+    <nav class="nav">
+      <a class="active" href="#" aria-current="page"><svg viewBox="0 0 24 24"><path d="M4 13h6V4H4v9Zm10 7h6V11h-6v9ZM4 20h6v-3H4v3Zm10-13h6V4h-6v3Z"/></svg>Dashboard</a>
+      <a href="#"><svg viewBox="0 0 24 24"><path d="M3 7h18v12H3zM16 11h5M6 7l2-3h8l2 3"/></svg>Carteira</a>
+    </nav>
+    <div class="nav-label">Gestão</div>
+    <nav class="nav">
+      <a href="#"><svg viewBox="0 0 24 24"><path d="M5 19V9m7 10V5m7 14v-7M3 19h18"/></svg>Ações</a>
+      <a href="#"><svg viewBox="0 0 24 24"><path d="M4 10h16M5 10v9m4-9v9m6-9v9m4-9v9M3 19h18M12 4l9 4H3l9-4Z"/></svg>Corretoras</a>
+      <a href="#"><svg viewBox="0 0 24 24"><path d="M7 7h13m0 0-3-3m3 3-3 3M17 17H4m0 0 3 3m-3-3 3-3"/></svg>Operações</a>
+    </nav>
+    <div class="sidebar-foot"><span class="eyebrow">Ambiente acadêmico</span><strong>Simulação, não negociação</strong><p>Este sistema registra operações fictícias e não envia ordens ao mercado.</p></div>
+  </aside>
+
+  <div class="app">
+    <header class="mobile-header"><div class="mobile-brand"><div class="brand-mark">AC</div>Atlas Carteira</div><button class="icon-button" aria-label="Notificações">•••</button></header>
+    <header class="topbar"><div class="crumb"><span>Atlas Carteira</span><span>›</span><strong>Dashboard</strong></div><div class="top-actions"><span class="status-pill"><i></i>Dados sincronizados</span><button class="icon-button" aria-label="Ajuda">?</button></div></header>
+
+    <main id="conteudo">
+      <div class="demo-banner"><span><strong>Protótipo demonstrativo</strong> · Todos os valores abaixo são fictícios.</span><span>Não usar para decisões financeiras.</span></div>
+      <div class="page-head">
+        <div><div class="eyebrow">Resumo da carteira</div><h1>Olá, veja sua simulação</h1><p class="subtitle">Posição consolidada em 06/09/2026 às 14:32 BRT</p></div>
+        <button class="primary"><b>＋</b><span>Registrar operação simulada</span></button>
+      </div>
+
+      <section class="cards" aria-label="Resumo demonstrativo">
+        <article class="card summary"><div class="summary-label"><i></i>Patrimônio estimado</div><div class="summary-value">R$ 48.720,40</div><div class="summary-meta">Consolidado em BRL</div></article>
+        <article class="card summary"><div class="summary-label"><i></i>Custo das posições</div><div class="summary-value">R$ 44.210,00</div><div class="summary-meta">Calculado pelo backend</div></article>
+        <article class="card summary"><div class="summary-label"><i></i>Resultado não realizado</div><div class="summary-value gain">+ R$ 4.510,40</div><div class="summary-meta"><span class="gain">▲ +10,20%</span> sobre o custo</div></article>
+        <article class="card summary"><div class="summary-label"><i></i>Posições ativas</div><div class="summary-value">4</div><div class="summary-meta">em 2 corretoras simuladas</div></article>
+      </section>
+
+      <section class="main-grid">
+        <article class="card positions">
+          <div class="panel-head"><div><h2>Principais posições</h2><p>Valores nativos e resultado demonstrativo</p></div><a class="link" href="#">Ver carteira →</a></div>
+          <div class="desktop-table"><table>
+            <thead><tr><th>Ativo</th><th>Corretora</th><th class="right">Quantidade</th><th class="right">Preço médio</th><th class="right">Cotação</th><th class="right">Valor atual</th><th class="right">Resultado</th></tr></thead>
+            <tbody>
+              <tr><td><div class="asset"><div class="asset-mark">PE</div><div><strong>PETR4</strong><small>Brasil · BRL</small></div></div></td><td>Corretora Horizonte</td><td class="right">300</td><td class="right">R$ 31,20</td><td class="right">R$ 36,48<div class="source">Fonte demo · 14:31</div></td><td class="right"><strong>R$ 10.944,00</strong></td><td class="right gain">▲ +16,92%</td></tr>
+              <tr><td><div class="asset"><div class="asset-mark" style="background:#204f86">VA</div><div><strong>VALE3</strong><small>Brasil · BRL</small></div></div></td><td>Corretora Horizonte</td><td class="right">180</td><td class="right">R$ 61,85</td><td class="right">R$ 64,10<div class="source">Fonte demo · 14:31</div></td><td class="right"><strong>R$ 11.538,00</strong></td><td class="right gain">▲ +3,64%</td></tr>
+              <tr><td><div class="asset"><div class="asset-mark" style="background:#345995">AA</div><div><strong>AAPL</strong><small>EUA · USD</small></div></div></td><td>Investimentos Aurora</td><td class="right">20</td><td class="right">US$ 187,40</td><td class="right">US$ 201,32<div class="source">Fonte demo · 14:30</div></td><td class="right"><strong>US$ 4.026,40</strong></td><td class="right gain">▲ +7,43%</td></tr>
+              <tr><td><div class="asset"><div class="asset-mark" style="background:#556a87">IT</div><div><strong>ITUB4</strong><small>Brasil · BRL</small></div></div></td><td>Investimentos Aurora</td><td class="right">150</td><td class="right">R$ 34,70</td><td class="right">R$ 33,92<div class="source">Fonte demo · 14:31</div></td><td class="right"><strong>R$ 5.088,00</strong></td><td class="right loss">▼ −2,25%</td></tr>
+            </tbody>
+          </table></div>
+          <div class="mobile-cards">
+            <div class="position-card"><div class="position-top"><div class="asset"><div class="asset-mark">PE</div><div><strong>PETR4</strong><small>Horizonte · BRL</small></div></div><div class="position-total">R$ 10.944,00<small>▲ +16,92%</small></div></div><div class="position-details"><div><span>Quantidade</span><strong>300</strong></div><div><span>Preço médio</span><strong>R$ 31,20</strong></div><div><span>Cotação</span><strong>R$ 36,48</strong></div></div></div>
+            <div class="position-card"><div class="position-top"><div class="asset"><div class="asset-mark" style="background:#204f86">VA</div><div><strong>VALE3</strong><small>Horizonte · BRL</small></div></div><div class="position-total">R$ 11.538,00<small>▲ +3,64%</small></div></div><div class="position-details"><div><span>Quantidade</span><strong>180</strong></div><div><span>Preço médio</span><strong>R$ 61,85</strong></div><div><span>Cotação</span><strong>R$ 64,10</strong></div></div></div>
+            <div class="position-card"><div class="position-top"><div class="asset"><div class="asset-mark" style="background:#345995">AA</div><div><strong>AAPL</strong><small>Aurora · USD</small></div></div><div class="position-total">US$ 4.026,40<small>▲ +7,43%</small></div></div><div class="position-details"><div><span>Quantidade</span><strong>20</strong></div><div><span>Preço médio</span><strong>US$ 187,40</strong></div><div><span>Cotação</span><strong>US$ 201,32</strong></div></div></div>
+          </div>
+        </article>
+
+      </section>
+
+      <section class="lower-grid">
+        <article class="card"><div class="panel-head"><div><h2>Movimentações recentes</h2><p>Histórico demonstrativo persistido</p></div><a class="link" href="#">Ver todas →</a></div><div class="movement-list">
+          <div class="movement"><div class="move-icon">↓</div><div><strong>Compra simulada · PETR4</strong><small>06 set 2026, 14:08 · Corretora Horizonte</small></div><div class="movement-value">100 × R$ 36,42<small>BRL</small></div></div>
+          <div class="movement"><div class="move-icon sell">↑</div><div><strong>Venda simulada · ITUB4</strong><small>04 set 2026, 11:26 · Investimentos Aurora</small></div><div class="movement-value">50 × R$ 34,10<small>BRL</small></div></div>
+          <div class="movement"><div class="move-icon">↓</div><div><strong>Compra simulada · AAPL</strong><small>02 set 2026, 16:41 · Investimentos Aurora</small></div><div class="movement-value">5 × US$ 200,10<small>USD</small></div></div>
+        </div></article>
+        <aside class="card data-panel"><div class="panel-head"><div><h2>Qualidade dos dados</h2><p>Origem e referência das estimativas</p></div></div><div class="data-row"><div><strong>Ações Brasil</strong><small>Provedor demonstrativo<br>Referência: 06/09/2026 14:31 BRT</small></div><span class="tag">ATUAL</span></div><div class="data-row"><div><strong>Ações EUA</strong><small>Provedor demonstrativo<br>Referência: 06/09/2026 14:30 EDT</small></div><span class="tag">ATUAL</span></div><div class="data-row"><div><strong>Conversão USD/BRL</strong><small>PTAX/BCB de referência · dado fictício<br>Não representa câmbio executável</small></div><span class="tag reference">REFERÊNCIA</span></div></aside>
+      </section>
+      <p class="academic">Sistema acadêmico de controle e simulação de carteira. Não executa ordens e não constitui recomendação de investimento.</p>
+    </main>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Navegação principal móvel">
+    <a class="active" href="#" aria-current="page"><svg viewBox="0 0 24 24"><path d="M4 13h6V4H4v9Zm10 7h6V11h-6v9ZM4 20h6v-3H4v3Zm10-13h6V4h-6v3Z"/></svg>Início</a>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M3 7h18v12H3zM16 11h5"/></svg>Carteira</a>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M5 19V9m7 10V5m7 14v-7M3 19h18"/></svg>Ações</a>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M4 10h16M5 10v9m7-9v9m7-9v9M3 19h18"/></svg>Corretoras</a>
+    <a href="#"><svg viewBox="0 0 24 24"><path d="M7 7h13m0 0-3-3m3 3-3 3M17 17H4m0 0 3 3m-3-3 3-3"/></svg>Operações</a>
+  </nav>
+</body>
+</html>
