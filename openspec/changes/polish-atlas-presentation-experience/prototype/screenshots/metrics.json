@@ -1,0 +1,74 @@
+[
+  {
+    "screen": "login",
+    "width": 1440,
+    "height": 1024,
+    "overflow": false
+  },
+  {
+    "screen": "login",
+    "width": 390,
+    "height": 844,
+    "overflow": false
+  },
+  {
+    "screen": "login",
+    "width": 320,
+    "height": 568,
+    "overflow": false
+  },
+  {
+    "screen": "dashboard",
+    "width": 1440,
+    "height": 1024,
+    "overflow": false
+  },
+  {
+    "screen": "dashboard",
+    "width": 390,
+    "height": 844,
+    "overflow": false
+  },
+  {
+    "screen": "dashboard",
+    "width": 320,
+    "height": 568,
+    "overflow": false
+  },
+  {
+    "screen": "carteira",
+    "width": 1440,
+    "height": 1024,
+    "overflow": false
+  },
+  {
+    "screen": "carteira",
+    "width": 390,
+    "height": 844,
+    "overflow": false
+  },
+  {
+    "screen": "carteira",
+    "width": 320,
+    "height": 568,
+    "overflow": false
+  },
+  {
+    "screen": "operacoes",
+    "width": 1440,
+    "height": 1024,
+    "overflow": false
+  },
+  {
+    "screen": "operacoes",
+    "width": 390,
+    "height": 844,
+    "overflow": false
+  },
+  {
+    "screen": "operacoes",
+    "width": 320,
+    "height": 568,
+    "overflow": false
+  }
+]
