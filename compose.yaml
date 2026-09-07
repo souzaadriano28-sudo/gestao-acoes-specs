@@ -42,6 +42,8 @@ services:
       INTEGRATIONS_TWELVEDATA_URL: ${INTEGRATIONS_TWELVEDATA_URL:-https://api.twelvedata.com}
       INTEGRATIONS_BRASILAPI_URL: ${INTEGRATIONS_BRASILAPI_URL:-https://brasilapi.com.br/api/cnpj/v1}
       INTEGRATIONS_VIACEP_URL: ${INTEGRATIONS_VIACEP_URL:-https://viacep.com.br/ws}
+      INTEGRATIONS_BCB_PTAX_URL: ${INTEGRATIONS_BCB_PTAX_URL:-https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata}
+      INTEGRATIONS_CVM_REGISTRY_URL: ${INTEGRATIONS_CVM_REGISTRY_URL:-https://dados.cvm.gov.br/dados/INTERMED/CAD/DADOS}
       APP_CORS_ALLOWED_ORIGIN: http://127.0.0.1:${FRONTEND_PORT:-4200}
     depends_on:
       postgres:

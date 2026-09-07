@@ -1,6 +1,6 @@
 ## 0. Predecessora de segurança
 
-- [ ] 0.1 Confirmar que `add-secure-admin-authentication` foi implementada, testada estritamente e integrada aos três containers antes de alterar o Dashboard; verificar login, sessão, CSRF, rotas protegidas e logout em E2E.
+- [x] 0.1 Confirmar que `add-secure-admin-authentication` foi implementada, testada estritamente e integrada aos três containers antes de alterar o Dashboard; verificar login, sessão, CSRF, rotas protegidas e logout em E2E.
 
 ## 1. Contract baselines and decisions
 
@@ -79,19 +79,19 @@
 
 - [x] 9.1 Add automated accessibility checks to every route and major async/form state and verify no detectable WCAG 2.2 A/AA violations remain.
 - [x] 9.2 Complete a keyboard-only audit for navigation, filters, pagination, quote update and operation; verify logical focus, visible/unobscured focus and no keyboard trap.
-- [ ] 9.3 Complete screen-reader checks for landmarks, headings, tables/mobile cards, field errors, pending/success/error/unknown announcements and verify results in a recorded checklist.
+- [x] 9.3 Complete screen-reader checks for landmarks, headings, tables/mobile cards, field errors, pending/success/error/unknown announcements and verify results in a recorded checklist.
 - [x] 9.4 Verify 200% zoom, text spacing and reflow at 320×568, 390×844, 768×1024 and 1440×1024 with long Portuguese labels and values.
 - [x] 9.5 Verify pointer targets, contrast for all themes/states and that positive/negative/unavailable meaning survives grayscale and forced-colors mode.
 
 ## 10. E2E, three-container execution and delivery evidence
 
-- [ ] 10.1 Extend provider stubs with quote/exchange/evidence success, stale, rate-limit, invalid and unavailable fixtures and verify tests make no real financial-network request.
+- [x] 10.1 Extend provider stubs with quote/exchange/evidence success, stale, rate-limit, invalid and unavailable fixtures and verify tests make no real financial-network request.
 - [x] 10.2 Add desktop E2E for first-use empty state, broker/action registration, simulated purchase, dashboard, portfolio, history and simulated sale; verify exact deterministic values and sources.
-- [ ] 10.3 Add mobile E2E for the same journey plus navigation and responsive table alternatives; verify no page-level horizontal overflow at 390 px and 320 px.
+- [x] 10.3 Add mobile E2E for the same journey plus navigation and responsive table alternatives; verify no page-level horizontal overflow at 390 px and 320 px.
 - [x] 10.10 Add authenticated tablet E2E at 768×1024 and verify compact navigation, two-column cards, readable tables, unobscured focus and absence of overlap.
-- [ ] 10.4 Add E2E for stale data, partial failure, exchange unavailable, 409 conflict and unknown mutation outcome; verify retry never resends the original mutation.
+- [x] 10.4 Add E2E for stale data, partial failure, exchange unavailable, 409 conflict and unknown mutation outcome; verify retry never resends the original mutation.
 - [x] 10.5 Run non-interactive frontend build/unit suite and backend Maven unit/integration suite; verify both exit successfully without skipped tests hiding regressions.
 - [x] 10.6 Run PostgreSQL concurrency tests for simultaneous first buys, contested sales and lock timeout; verify exact transaction/position outcomes remain compliant with TI-06.
-- [ ] 10.7 Build and start exactly `postgres`, `backend` and `frontend`, wait for all healthchecks, run desktop/mobile Playwright through Nginx `/api`, and verify the isolated stack succeeds with simulated providers.
-- [ ] 10.8 Record screenshots, accessibility checklist, contract examples and test commands/results; verify the academic disclaimer and demonstrative-data labels are visible in all approval artifacts.
+- [x] 10.7 Build and start exactly `postgres`, `backend` and `frontend`, wait for all healthchecks, run desktop/mobile Playwright through Nginx `/api`, and verify the isolated stack succeeds with simulated providers.
+- [x] 10.8 Record screenshots, accessibility checklist, contract examples and test commands/results; verify the academic disclaimer and demonstrative-data labels are visible in all approval artifacts.
 - [x] 10.9 Run `openspec validate --change modernize-investment-experience --strict --no-interactive` after implementation and verify zero errors/warnings before requesting archive review.
