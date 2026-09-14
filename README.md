@@ -45,14 +45,14 @@ Como não há submódulos, a reprodução exata depende da combinação dos trê
 
 | Componente | Repositório | Branch | Commit validado |
 | --- | --- | --- | --- |
-| Backend | `gestao-acoes-spring` | `main` | `ccaece38ff05663f11a48bfe4a523c90af041f94` |
+| Backend | `gestao-acoes-spring` | `main` | `b2ab3f7ab4c7545c6e4f16cc5771ad85a56bd66d` |
 | Frontend | `gestao-acoes-ui` | `master` | `543bed5bb0e070d2f7ad833d6038a00262990fd9` |
 
 Depois dos três clones, use os comandos abaixo para reproduzir exatamente essa combinação:
 
 ```powershell
 git -C gestao-acoes-spring fetch origin feature/enable-secure-multi-user-ownership
-git -C gestao-acoes-spring switch --detach ccaece38ff05663f11a48bfe4a523c90af041f94
+git -C gestao-acoes-spring switch --detach b2ab3f7ab4c7545c6e4f16cc5771ad85a56bd66d
 
 git -C gestao-acoes-ui fetch origin feature/enable-secure-multi-user-ownership
 git -C gestao-acoes-ui switch --detach 543bed5bb0e070d2f7ad833d6038a00262990fd9
@@ -366,4 +366,4 @@ Não há, na topologia atual, um ponteiro de submódulo para atualizar na raiz. 
 
 ## Informações acadêmicas
 
-Integrantes identificados na documentação existente do projeto: Adriano Alves, Breno Rogerio e Vinicius Oliveira.
+Autor do projeto: Adriano Alves.
