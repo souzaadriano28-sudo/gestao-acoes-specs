@@ -45,17 +45,17 @@ Como não há submódulos, a reprodução exata depende da combinação dos trê
 
 | Componente | Repositório | Branch | Commit validado |
 | --- | --- | --- | --- |
-| Backend | `gestao-acoes-spring` | `feature/enable-secure-multi-user-ownership` | `9624108848667d3c80eb6e9d164911c61438dabd` |
-| Frontend | `gestao-acoes-ui` | `feature/enable-secure-multi-user-ownership` | `0238d9e22ad38500c20bd40f2f74c68dfe27b712` |
+| Backend | `gestao-acoes-spring` | `main` | `ccaece38ff05663f11a48bfe4a523c90af041f94` |
+| Frontend | `gestao-acoes-ui` | `master` | `543bed5bb0e070d2f7ad833d6038a00262990fd9` |
 
 Depois dos três clones, use os comandos abaixo para reproduzir exatamente essa combinação:
 
 ```powershell
 git -C gestao-acoes-spring fetch origin feature/enable-secure-multi-user-ownership
-git -C gestao-acoes-spring switch --detach 9624108848667d3c80eb6e9d164911c61438dabd
+git -C gestao-acoes-spring switch --detach ccaece38ff05663f11a48bfe4a523c90af041f94
 
 git -C gestao-acoes-ui fetch origin feature/enable-secure-multi-user-ownership
-git -C gestao-acoes-ui switch --detach 0238d9e22ad38500c20bd40f2f74c68dfe27b712
+git -C gestao-acoes-ui switch --detach 543bed5bb0e070d2f7ad833d6038a00262990fd9
 ```
 
 `switch --detach` é apropriado para reprodução exata; para desenvolvimento, troque para uma branch própria antes de alterar arquivos.
