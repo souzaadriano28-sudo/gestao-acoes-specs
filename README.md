@@ -4,6 +4,16 @@ O Atlas Carteira é uma aplicação acadêmica para acompanhamento de carteiras 
 
 > **Aviso:** o sistema é destinado ao acompanhamento da carteira. Registros de compra e venda são históricos; nenhuma ordem é enviada ao mercado.
 
+## Repositórios da entrega
+
+| Componente | Responsabilidade | Repositório |
+| --- | --- | --- |
+| Principal | Integração, Docker Compose e documentação | [gestao-acoes-specs](https://github.com/souzaadriano28-sudo/gestao-acoes-specs) |
+| Backend | API Spring Boot | [gestao-acoes-spring](https://github.com/souzaadriano28-sudo/gestao-acoes-spring) |
+| Frontend | Aplicação Angular | [gestao-acoes-ui](https://github.com/souzaadriano28-sudo/gestao-acoes-ui) |
+
+O repositório principal coordena a execução; backend e frontend são repositórios independentes e devem ser clonados na estrutura indicada pelo tutorial.
+
 ## Arquitetura dos repositórios
 
 Nesta pasta existem três repositórios Git independentes:
