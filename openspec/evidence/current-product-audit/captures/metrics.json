@@ -1,0 +1,389 @@
+[
+  {
+    "name": "corretoras",
+    "path": "/corretoras",
+    "viewport": {
+      "width": 1440,
+      "height": 1024
+    },
+    "documentClientWidth": 1440,
+    "documentScrollWidth": 1440,
+    "bodyText": "Pular para o conteúdo\nAtlas\nCarteira\nVisão geral\nCarteira\nAções\nCorretoras\nOperações\n\nAmbiente acadêmico\nRegistros simulados\n\nÁrea protegida\nAtlas Carteira\nConta de inspeção\nSair\nAtlas Carteira\n›\nCorretoras\n\nINSTITUIÇÕES\n\nCorretoras\n\nDados empresariais e evidência CVM permanecem claramente separados.\n\nAtualizar evidências\nAtualizar lista\n\nNOVA INSTITUIÇÃO\n\nCadastrar corretora\n\nSituação empresarial não comprova autorização da CVM.\n\nCNPJ\n14 dígitos; pontuação é opcional.\nCEP\nCadastrar corretora\n\nCADASTRO\n\nCorretoras cadastradas\nINSTITUIÇÃO\tCNPJ\tLOCALIDADE\tSITUAÇÃO EMPRESARIAL\tEVIDÊNCIA REGULATÓRIA\nXP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBILIARIOS S/A\nXP INVESTIMENTOS CCTVM S/A\n\t02.332.886/0001-04\tFernandópolis /SP\tATIVA\nFonte: BRASIL_API\n\t\n?\nNão consultada\nFonte: Origem não informada\nSimulação acadêmica · Nenhuma ordem é enviada; não constitui recomendação.",
+    "fields": {
+      "cnpj": {
+        "x": 687.09375,
+        "y": 325.390625,
+        "width": 234.03125,
+        "height": 44,
+        "top": 325.390625,
+        "right": 921.125,
+        "bottom": 369.390625,
+        "left": 687.09375
+      },
+      "cep": {
+        "x": 933.125,
+        "y": 353.375,
+        "width": 234.046875,
+        "height": 44,
+        "top": 353.375,
+        "right": 1167.171875,
+        "bottom": 397.375,
+        "left": 933.125
+      },
+      "ticker": null,
+      "market": null,
+      "operationAsset": null,
+      "operationBroker": null,
+      "operationQuantity": null
+    },
+    "tables": [
+      {
+        "clientWidth": 1068,
+        "scrollWidth": 1068,
+        "tableWidth": 1068
+      }
+    ]
+  },
+  {
+    "name": "corretoras",
+    "path": "/corretoras",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "documentClientWidth": 390,
+    "documentScrollWidth": 390,
+    "bodyText": "Pular para o conteúdo\nAtlas\nÁrea protegida\nAtlas Carteira\nConta de inspeção\nSair\nAtlas Carteira\n›\nCorretoras\n\nINSTITUIÇÕES\n\nCorretoras\n\nDados empresariais e evidência CVM permanecem claramente separados.\n\nAtualizar evidências\nAtualizar lista\n\nNOVA INSTITUIÇÃO\n\nCadastrar corretora\n\nSituação empresarial não comprova autorização da CVM.\n\nCNPJ\n14 dígitos; pontuação é opcional.\nCEP\nCadastrar corretora\n\nCADASTRO\n\nCorretoras cadastradas\nXP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBILIARIOS S/A\n02.332.886/0001-04\n•\nNão consultada\nLocalidade\nFernandópolis /SP\nSituação empresarial\nATIVA\nFonte empresarial\nBRASIL_API\nCategoria regulatória\nNão informada\nFonte regulatória\nOrigem não informada\nReferência\nIndisponível\nSimulação acadêmica · Nenhuma ordem é enviada; não constitui recomendação.\nVisão geral\nCarteira\nAções\nCorretoras\nOperações",
+    "fields": {
+      "cnpj": {
+        "x": 33,
+        "y": 512.46875,
+        "width": 324,
+        "height": 63.671875,
+        "top": 512.46875,
+        "right": 357,
+        "bottom": 576.140625,
+        "left": 33
+      },
+      "cep": {
+        "x": 33,
+        "y": 708.296875,
+        "width": 324,
+        "height": 87.5,
+        "top": 708.296875,
+        "right": 357,
+        "bottom": 795.796875,
+        "left": 33
+      },
+      "ticker": null,
+      "market": null,
+      "operationAsset": null,
+      "operationBroker": null,
+      "operationQuantity": null
+    },
+    "tables": [
+      {
+        "clientWidth": 0,
+        "scrollWidth": 0,
+        "tableWidth": 0
+      }
+    ]
+  },
+  {
+    "name": "acoes",
+    "path": "/acoes",
+    "viewport": {
+      "width": 1440,
+      "height": 1024
+    },
+    "documentClientWidth": 1440,
+    "documentScrollWidth": 1440,
+    "bodyText": "Pular para o conteúdo\nAtlas\nCarteira\nVisão geral\nCarteira\nAções\nCorretoras\nOperações\n\nAmbiente acadêmico\nRegistros simulados\n\nÁrea protegida\nAtlas Carteira\nConta de inspeção\nSair\nAtlas Carteira\n›\nAções\n\nATIVOS MONITORADOS\n\nAções\n\nCadastre ativos e acompanhe a origem de suas cotações.\n\nAtualizar lista\n\nNOVO ATIVO\n\nCadastrar ativo\n\nUse o ticker canônico; a cotação é consultada pelo backend.\n\nTicker\nEx.: PETR4 ou AAPL\nMercado\nBrasil (B3)\nAmericano\nCadastrar ativo\n\nCATÁLOGO\n\nAtivos monitorados\nBuscar\nATIVO\tMERCADO\tCOTAÇÃO\tREFERÊNCIA\tORIGEM, COLETA E FRESHNESS\tAÇÃO\nPETR4\nEMPRESA NÃO DETALHADA\n\tBRASIL\tR$ 47,11\t07/09/2026, 17:22:10 · fuso não fornecido\t\n?\nOrigem não informada\nColeta e freshness indisponíveis no contrato legado.\n\tAtualizar cotação\nSimulação acadêmica · Nenhuma ordem é enviada; não constitui recomendação.",
+    "fields": {
+      "cnpj": null,
+      "cep": null,
+      "ticker": {
+        "x": 687.09375,
+        "y": 325.40625,
+        "width": 250.84375,
+        "height": 44,
+        "top": 325.40625,
+        "right": 937.9375,
+        "bottom": 369.40625,
+        "left": 687.09375
+      },
+      "market": {
+        "x": 949.9375,
+        "y": 353.390625,
+        "width": 250.859375,
+        "height": 44,
+        "top": 353.390625,
+        "right": 1200.796875,
+        "bottom": 397.390625,
+        "left": 949.9375
+      },
+      "operationAsset": null,
+      "operationBroker": null,
+      "operationQuantity": null
+    },
+    "tables": [
+      {
+        "clientWidth": 1068,
+        "scrollWidth": 1068,
+        "tableWidth": 1068
+      }
+    ]
+  },
+  {
+    "name": "acoes",
+    "path": "/acoes",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "documentClientWidth": 390,
+    "documentScrollWidth": 390,
+    "bodyText": "Pular para o conteúdo\nAtlas\nÁrea protegida\nAtlas Carteira\nConta de inspeção\nSair\nAtlas Carteira\n›\nAções\n\nATIVOS MONITORADOS\n\nAções\n\nCadastre ativos e acompanhe a origem de suas cotações.\n\nAtualizar lista\n\nNOVO ATIVO\n\nCadastrar ativo\n\nUse o ticker canônico; a cotação é consultada pelo backend.\n\nTicker\nEx.: PETR4 ou AAPL\nMercado\nBrasil (B3)\nAmericano\nCadastrar ativo\n\nCATÁLOGO\n\nAtivos monitorados\nBuscar\nPETR4\nEmpresa não detalhada\nR$ 47,11\nMercado\nBRASIL\nMoeda\nBRL\nReferência\n07/09/2026, 17:22:10 · fuso não fornecido\nOrigem\nOrigem não informada\nTipo de fonte\nIndisponível\nColeta\nIndisponível\n\nColeta e freshness indisponíveis no contrato legado.\n\nAtualizar cotação\nSimulação acadêmica · Nenhuma ordem é enviada; não constitui recomendação.\nVisão geral\nCarteira\nAções\nCorretoras\nOperações",
+    "fields": {
+      "cnpj": null,
+      "cep": null,
+      "ticker": {
+        "x": 33,
+        "y": 512.46875,
+        "width": 324,
+        "height": 63.671875,
+        "top": 512.46875,
+        "right": 357,
+        "bottom": 576.140625,
+        "left": 33
+      },
+      "market": {
+        "x": 33,
+        "y": 708.296875,
+        "width": 324,
+        "height": 87.5,
+        "top": 708.296875,
+        "right": 357,
+        "bottom": 795.796875,
+        "left": 33
+      },
+      "operationAsset": null,
+      "operationBroker": null,
+      "operationQuantity": null
+    },
+    "tables": [
+      {
+        "clientWidth": 0,
+        "scrollWidth": 0,
+        "tableWidth": 0
+      }
+    ]
+  },
+  {
+    "name": "operacoes",
+    "path": "/operacoes",
+    "viewport": {
+      "width": 1440,
+      "height": 1024
+    },
+    "documentClientWidth": 1440,
+    "documentScrollWidth": 1440,
+    "bodyText": "Pular para o conteúdo\nAtlas\nCarteira\nVisão geral\nCarteira\nAções\nCorretoras\nOperações\n\nAmbiente acadêmico\nRegistros simulados\n\nÁrea protegida\nAtlas Carteira\nConta de inspeção\nSair\nAtlas Carteira\n›\nOperações\n\nREGISTROS SIMULADOS\n\nOperações\n\nRegistre uma compra ou venda; o preço é consultado pelo backend.\n\nReconciliar\n1\nNova operação\n\nRevise os dados antes de confirmar.\n\nTipo\nCompra\nVenda\nAtivo\nSelecione\nPETR4 · BRASIL\nCorretora\nSelecione\nXP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBILIARIOS S/A\nQuantidade\nInteira e positiva.\nMercado\nSelecione um ativo\n\nPreço consultado no envio. Nenhuma ordem será executada.\n\nRevisar compra simulada\n\nHISTÓRICO\n\nMovimentações\n↻\nFiltros avançados\nNenhum ativo\nTipo\nTodos\nCompra\nVenda\nTicker\nCorretora\nTodas\nXP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBILIARIOS S/A\nDesde\nAté\nAplicar\nLimpar\nOPERAÇÃO\tATIVO\tCORRETORA\tQUANTIDADE\tPREÇO NATIVO\tDATA\tORIGEM HISTÓRICA\n\n↓\nCOMPRA SIMULADA\n\tPETR4\nBRASIL\n\tXP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBILIARIOS S/A\t10\tR$ 47,11\t07/09/2026, 17:24:13 BRT\tOrigem não informada\nAnterior\nPágina 1 de 1\nPróxima\nSimulação acadêmica · Nenhuma ordem é enviada; não constitui recomendação.",
+    "fields": {
+      "cnpj": null,
+      "cep": null,
+      "ticker": null,
+      "market": null,
+      "operationAsset": {
+        "x": 297,
+        "y": 481.390625,
+        "width": 182.265625,
+        "height": 44,
+        "top": 481.390625,
+        "right": 479.265625,
+        "bottom": 525.390625,
+        "left": 297
+      },
+      "operationBroker": {
+        "x": 491.265625,
+        "y": 481.390625,
+        "width": 182.265625,
+        "height": 44,
+        "top": 481.390625,
+        "right": 673.53125,
+        "bottom": 525.390625,
+        "left": 491.265625
+      },
+      "operationQuantity": {
+        "x": 297,
+        "y": 566.390625,
+        "width": 182.265625,
+        "height": 44,
+        "top": 566.390625,
+        "right": 479.265625,
+        "bottom": 610.390625,
+        "left": 297
+      }
+    },
+    "tables": [
+      {
+        "clientWidth": 625,
+        "scrollWidth": 833,
+        "tableWidth": 833.0625
+      }
+    ]
+  },
+  {
+    "name": "operacoes",
+    "path": "/operacoes",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "documentClientWidth": 390,
+    "documentScrollWidth": 560,
+    "bodyText": "Pular para o conteúdo\nAtlas\nÁrea protegida\nAtlas Carteira\nConta de inspeção\nSair\nAtlas Carteira\n›\nOperações\n\nREGISTROS SIMULADOS\n\nOperações\n\nRegistre uma compra ou venda; o preço é consultado pelo backend.\n\nReconciliar\n1\nNova operação\n\nRevise os dados antes de confirmar.\n\nTipo\nCompra\nVenda\nAtivo\nSelecione\nPETR4 · BRASIL\nCorretora\nSelecione\nXP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBILIARIOS S/A\nQuantidade\nInteira e positiva.\nMercado\nSelecione um ativo\n\nPreço consultado no envio. Nenhuma ordem será executada.\n\nRevisar compra simulada\n\nHISTÓRICO\n\nMovimentações\n↻\nFiltros avançados\nNenhum ativo\n↓\nCompra de PETR4\n10 × R$ 47,11 · 07/09/2026, 17:24:13 BRT\nXP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBILIARIOS S/A\nDetalhes do registro\nAnterior\nPágina 1 de 1\nPróxima\nSimulação acadêmica · Nenhuma ordem é enviada; não constitui recomendação.\nVisão geral\nCarteira\nAções\nCorretoras\nOperações",
+    "fields": {
+      "cnpj": null,
+      "cep": null,
+      "ticker": null,
+      "market": null,
+      "operationAsset": {
+        "x": 33,
+        "y": 523.796875,
+        "width": 324,
+        "height": 44,
+        "top": 523.796875,
+        "right": 357,
+        "bottom": 567.796875,
+        "left": 33
+      },
+      "operationBroker": {
+        "x": 33,
+        "y": 608.796875,
+        "width": 324,
+        "height": 44,
+        "top": 608.796875,
+        "right": 357,
+        "bottom": 652.796875,
+        "left": 33
+      },
+      "operationQuantity": {
+        "x": 33,
+        "y": 693.796875,
+        "width": 324,
+        "height": 44,
+        "top": 693.796875,
+        "right": 357,
+        "bottom": 737.796875,
+        "left": 33
+      }
+    },
+    "tables": [
+      {
+        "clientWidth": 0,
+        "scrollWidth": 0,
+        "tableWidth": 0
+      }
+    ]
+  },
+  {
+    "name": "operacoes-revisao-sem-preco",
+    "path": "/operacoes",
+    "viewport": {
+      "width": 1440,
+      "height": 1024
+    },
+    "documentClientWidth": 1440,
+    "documentScrollWidth": 1440,
+    "bodyText": "Pular para o conteúdo\nAtlas\nCarteira\nVisão geral\nCarteira\nAções\nCorretoras\nOperações\n\nAmbiente acadêmico\nRegistros simulados\n\nÁrea protegida\nAtlas Carteira\nConta de inspeção\nSair\nAtlas Carteira\n›\nOperações\n\nREGISTROS SIMULADOS\n\nOperações\n\nRegistre uma compra ou venda; o preço é consultado pelo backend.\n\nReconciliar\n1\nNova operação\n\nRevise os dados antes de confirmar.\n\nRevise antes de confirmar\nTipo\nCompra simulada\nAtivo\nPETR4 · BRASIL\nCorretora\nXP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBILIARIOS S/A\nQuantidade\n10\nPreço\nConsultado pelo backend; não garantido.\n\nConfirma apenas um registro acadêmico. Nenhuma ordem será enviada ao mercado.\n\nVoltar e editar\nConfirmar registro simulado\n\nHISTÓRICO\n\nMovimentações\n↻\nFiltros avançados\nNenhum ativo\nTipo\nTodos\nCompra\nVenda\nTicker\nCorretora\nTodas\nXP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBILIARIOS S/A\nDesde\nAté\nAplicar\nLimpar\nOPERAÇÃO\tATIVO\tCORRETORA\tQUANTIDADE\tPREÇO NATIVO\tDATA\tORIGEM HISTÓRICA\n\n↓\nCOMPRA SIMULADA\n\tPETR4\nBRASIL\n\tXP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBILIARIOS S/A\t10\tR$ 47,11\t07/09/2026, 17:24:13 BRT\tOrigem não informada\nAnterior\nPágina 1 de 1\nPróxima\nSimulação acadêmica · Nenhuma ordem é enviada; não constitui recomendação.",
+    "fields": {
+      "cnpj": null,
+      "cep": null,
+      "ticker": null,
+      "market": null,
+      "operationAsset": null,
+      "operationBroker": null,
+      "operationQuantity": null
+    },
+    "tables": [
+      {
+        "clientWidth": 625,
+        "scrollWidth": 833,
+        "tableWidth": 833.0625
+      }
+    ]
+  },
+  {
+    "name": "dashboard-qualidade-tecnica",
+    "path": "/dashboard",
+    "viewport": {
+      "width": 1440,
+      "height": 1024
+    },
+    "documentClientWidth": 1440,
+    "documentScrollWidth": 1440,
+    "bodyText": "Pular para o conteúdo\nAtlas\nCarteira\nVisão geral\nCarteira\nAções\nCorretoras\nOperações\n\nAmbiente acadêmico\nRegistros simulados\n\nÁrea protegida\nAtlas Carteira\nConta de inspeção\nSair\nAtlas Carteira\n›\nSua carteira\n\nVISÃO GERAL\n\nSua carteira\n\nPosições e valores confirmados pelo backend.\n\nAtualizar\nRegistrar operação\nDados parciais\nParte dos valores não pôde ser concluída. Os dados confirmados continuam visíveis; nenhum total parcial é apresentado como completo.\nPatrimônio estimado\n✓\nDisponível\n\nR$ 471,10\n\nConsolidado em BRL · 07/09/2026, 14:46:36 BRT\n\nCusto das posições\n✓\nDisponível\n\nR$ 471,10\n\nBase investida\n\nResultado não realizado\n✓\nDisponível\n\nR$ 0,00\n\nDiferença não realizada\n\nPosições ativas\n\n1\n\nativo–corretora\n\nCOMPOSIÇÃO ATUAL\n\nPrincipais posições\nVer carteira\nATIVO\tQUANTIDADE\tPREÇO MÉDIO\tVALOR ATUAL\tRESULTADO\nPETR4\nBRASIL · BRL\n\t10\tR$ 47,11\tR$ 471,10\tR$ 0,00\n\nATIVIDADE\n\nMovimentações\nVer todas\n↓\nCompra · PETR4\n07/09/2026, 17:24:13 BRT · XP INVESTIMENTOS CORRETORA DE CAMBIO, TITULOS E VALORES MOBILIARIOS S/A\n10 × R$ 47,11\n×\nIndisponível\nHá dados indisponíveis\nLeitura de 07/09/2026, 14:46:36 BRT\nFonte, referência, coleta e freshness\nBRAPI\n✓\nDisponível\nReferência\n07/09/2026, 14:22:10 BRT\nColeta\n07/09/2026, 14:22:10 BRT\nCâmbio USD/BRL\n×\nIndisponível\n. NOT_REQUIRED_FOR_SINGLE_CURRENCY_PORTFOLIO\n\nOrigem não informada\n\nReferência\nIndisponível\nColeta\nIndisponível\nSimulação acadêmica · Nenhuma ordem é enviada; não constitui recomendação.",
+    "fields": {
+      "cnpj": null,
+      "cep": null,
+      "ticker": null,
+      "market": null,
+      "operationAsset": null,
+      "operationBroker": null,
+      "operationQuantity": null
+    },
+    "tables": [
+      {
+        "clientWidth": 621,
+        "scrollWidth": 621,
+        "tableWidth": 621.484375
+      }
+    ]
+  },
+  {
+    "name": "ativo-americano-espera-controlada",
+    "path": "/acoes",
+    "viewport": {
+      "width": 1440,
+      "height": 1024
+    },
+    "documentClientWidth": 1440,
+    "documentScrollWidth": 1440,
+    "bodyText": "Pular para o conteúdo\nAtlas\nCarteira\nVisão geral\nCarteira\nAções\nCorretoras\nOperações\n\nAmbiente acadêmico\nRegistros simulados\n\nÁrea protegida\nAtlas Carteira\nConta de inspeção\nSair\nAtlas Carteira\n›\nAções\n\nATIVOS MONITORADOS\n\nAções\n\nCadastre ativos e acompanhe a origem de suas cotações.\n\nAtualizar lista\n\nNOVO ATIVO\n\nCadastrar ativo\n\nUse o ticker canônico; a cotação é consultada pelo backend.\n\nTicker\nEx.: PETR4 ou AAPL\nMercado\nBrasil (B3)\nAmericano\nConsultando…\n\nCATÁLOGO\n\nAtivos monitorados\nBuscar\nATIVO\tMERCADO\tCOTAÇÃO\tREFERÊNCIA\tORIGEM, COLETA E FRESHNESS\tAÇÃO\nPETR4\nEMPRESA NÃO DETALHADA\n\tBRASIL\tR$ 47,11\t07/09/2026, 17:22:10 · fuso não fornecido\t\n?\nOrigem não informada\nColeta e freshness indisponíveis no contrato legado.\n\tAtualizar cotação\nSimulação acadêmica · Nenhuma ordem é enviada; não constitui recomendação.",
+    "fields": {
+      "cnpj": null,
+      "cep": null,
+      "ticker": {
+        "x": 687.09375,
+        "y": 325.40625,
+        "width": 253.09375,
+        "height": 44,
+        "top": 325.40625,
+        "right": 940.1875,
+        "bottom": 369.40625,
+        "left": 687.09375
+      },
+      "market": {
+        "x": 952.1875,
+        "y": 353.390625,
+        "width": 253.09375,
+        "height": 44,
+        "top": 353.390625,
+        "right": 1205.28125,
+        "bottom": 397.390625,
+        "left": 952.1875
+      },
+      "operationAsset": null,
+      "operationBroker": null,
+      "operationQuantity": null
+    },
+    "tables": [
+      {
+        "clientWidth": 1068,
+        "scrollWidth": 1068,
+        "tableWidth": 1068
+      }
+    ]
+  }
+]
